@@ -16,6 +16,12 @@ import { getPackages } from "../services/landing/Package";
 import { ServerError } from "../util/ServerError";
 import NotFound from "../util/NotFound";
 import { getTools } from "../services/landing/Tools";
+import UserAppLayout from "../layout/UserAppLayout";
+import UserTools from "../pages/user/UserTools";
+import UserPricicng from "../pages/user/UserPricicng";
+import { dashboardRedirect } from "../services/user/DahboardRedirect";
+import UserDashboard from "../components/user/Dashboard";
+import { getDashboardDetails } from "../services/user/UserDashboardService";
 
 // eslint-disable-next-line react-refresh/only-export-components
 export const router = createBrowserRouter([
@@ -65,8 +71,29 @@ export const router = createBrowserRouter([
     {
         path: "*",
         element: <NotFound />
+    },
+    {
+        element: <UserAppLayout />,
+        path: "/user",
+        loader: dashboardRedirect,
+        children: [
+            {
+                path: "dashboard",
+                element: <UserDashboard />,
+                loader: getDashboardDetails
+            },
+            {
+                path: "tools",
+                element: <UserTools />
+            },
+            {
+                path: "pricing",
+                element: <UserPricicng />
+            }
+        ]
     }
-]);
+]
+);
 
 const DevToolBoxRoutes = () => {
     return (
