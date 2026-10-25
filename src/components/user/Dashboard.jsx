@@ -1,5 +1,6 @@
 
 import React, { useEffect, useMemo, useState } from 'react'
+import { motion } from "motion/react"
 import { useLoaderData } from 'react-router'
 import {
     FileText,
@@ -222,9 +223,15 @@ const UserDashboard = () => {
                     </section>
                 </div>
                 <div className='w-1/2 h-1/2'>
-                    <SimpleBarChart days={userMonthlyStatsDto.days}
-                        usages={userMonthlyStatsDto.usages}
-                        month={userMonthlyStatsDto.month} />
+                    <motion.div
+                        initial={{ opacity: 0, y: 20, scale: 0.95 }}
+                        animate={{ opacity: 1, y: 0, scale: 1 }}
+                        transition={{ duration: 0.6, ease: "easeOut" }}
+                    >
+                        <SimpleBarChart days={userMonthlyStatsDto.days}
+                            usages={userMonthlyStatsDto.usages}
+                            month={userMonthlyStatsDto.month} />
+                    </motion.div>
                 </div>
             </div>
         </div>

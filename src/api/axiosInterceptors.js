@@ -1,4 +1,4 @@
-import { usePublicApi, usePrivateApi } from "./axiosInstance";
+import { usePublicApi, usePrivateApi, refreshApi } from "./axiosInstance";
 import { toastError } from "../util/toat";
 
 const handleResponse = (response) => {
@@ -15,26 +15,42 @@ const handleResponse = (response) => {
 
     return { code, message, status, data };
 };
+let refreshPromise = null;
 
-const handleError = (error) => {
-    if (
-        error.code === "ECONNABORTED" ||
-        error.code === "ETIMEDOUT"
-    ) {
-        toastError("Request timed out. Please try again.");
-    } else if (error.response?.status === 401) {
-        toastError(error.response.data?.message ?? "Unauthorized");
-    } else if (error.response?.status === 404) {
-        toastError("Resource not found.");
-    } else if (error.response?.status >= 500) {
-        toastError("Server error. Please try again later.");
-    } else if (error.request && !error.response) {
-        toastError("Unable to reach the server.");
+const refreshAccessToken = () => {
+    if (!refreshPromise) {
+        refreshPromise = refreshApi
+            .post("/refresh/access-token")
+            .finally(() => { refreshPromise = null; }); // reset for next time
     }
-
-    return Promise.reject(error);
+    return refreshPromise;
 };
 
-[usePublicApi, usePrivateApi].forEach((api) => {
-    api.interceptors.response.use(handleResponse, handleError);
-});
+const handlePrivateError = async (error) => {
+    const originalRequest = error.config;
+    const status = error.response?.status;        // ?. so network errors don't crash
+
+    // not a 401, or we already retried once -> give up
+    if (status !== 401 || !originalRequest || originalRequest._retry) {
+        return Promise.reject(error);
+    }
+    originalRequest._retry = true;
+
+    try {
+        await refreshAccessToken();               // browser stores the new accessToken cookie
+        return usePrivateApi(originalRequest);    // retry; goes through handleResponse again
+    } catch (refreshError) {
+        // refresh token is bad/expired -> session is over
+        if (!window.location.pathname.startsWith("/login")) {
+            window.location.href = "/login?reason=expired";
+        }
+        return Promise.reject(refreshError);
+    }
+};
+
+
+const handlePublicError = (error) => {
+    return Promise.reject(error);
+};
+usePublicApi.interceptors.response.use(handleResponse, handlePublicError);
+usePrivateApi.interceptors.response.use(handleResponse, handlePrivateError);

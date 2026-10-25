@@ -5,7 +5,7 @@ export const usePublicApi = axios.create({
     headers: {
         'Content-Type': 'application/json'
     },
-    withCredentials: false,
+    withCredentials: true,
     timeout: 10000,
     timeoutErrorMessage: 'Request timeout',
 })
@@ -19,3 +19,8 @@ export const usePrivateApi = axios.create({
     timeout: 10000,
     timeoutErrorMessage: 'Request timeout',
 })
+
+export const refreshApi = axios.create({
+    baseURL: import.meta.env.VITE_API_BASE_URL,
+    withCredentials: true,
+});

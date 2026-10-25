@@ -1,10 +1,11 @@
-import { Boxes, Loader2 } from 'lucide-react'
-import React from 'react'
+import { Boxes, Loader2, Menu, X } from 'lucide-react'
+import React, { useState } from 'react'
 import { NavLink } from 'react-router'
 import { useUserDetails } from '../context/User/UserDetailsContext'
 
 const UserNavbar = () => {
     const { user, loading } = useUserDetails();
+    const [isOpen, setIsOpen] = useState(false);
     console.log("in navbar");
     if (loading)
         return <Loader2 />
@@ -25,7 +26,30 @@ const UserNavbar = () => {
     const status = details.isActive ? details.isActive : false;
     return (
         <>
-            <div className="flex flex-col justify-between h-screen w-[20%] bg-gradient-to-b from-[#0B1220] via-[#080F1C] to-[#050914] border-r border-white/10 z-50 sticky left-0">
+            <button onClick={() => { setIsOpen(!isOpen) }}
+                className='lg:hidden fixed top-4 left-4 z-[60] p-2 rounded-lg
+                       bg-slate-800 text-white border border-slate-600"'>
+                {isOpen ? <X size={24} /> : <Menu size={24} />}
+            </button>
+
+            {isOpen && (
+                <div
+                    onClick={() => setIsOpen(false)}
+                    className="lg:hidden fixed inset-0 bg-black/50 z-40"
+                />
+            )}
+
+            <div
+                className={`
+                fixed lg:sticky top-0 left-0 z-50
+                flex flex-col justify-between h-screen
+                bg-gradient-to-b from-[#0B1220] via-[#080F1C] to-[#050914]
+                border-r border-white/10
+                w-64 lg:w-[20%]
+                transition-transform duration-300
+                ${isOpen ? "translate-x-0" : "-translate-x-full lg:translate-x-0"}
+            `}
+            >
                 <div className='flex gap-1 items-center md:ml-2 md:w-fit w-full'>
                     <NavLink to={"/user/dashboard"}>
                         {/* logo  */}
@@ -118,9 +142,9 @@ transition-all duration-300 p-2 mt-3 ml-2'>
                         </div>
                     </div>
                 </div>
-            </div>
+            </div >
         </>
     )
 }
 
-export default UserNavbar
+export default UserNavbar;
