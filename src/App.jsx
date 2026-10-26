@@ -8,27 +8,7 @@ import { toastCustom } from './util/toat';
 import { listenForMessage } from './firebase/notification';
 import { accent, base } from './styles/toastStyles';
 function App() {
-  const requestPermission = async () => {
-    //take permission
-    const permission = await Notification.requestPermission();
-    // generate token
-    if (permission === "granted") {
-      const token = await getToken(messaging, { vapidKey: "BJnd5gigRcfVJY7eEVvKu4pIrZ7emVasqJ0xBhmWckwXXnDM-PuAzV09pWF5Z3-8GvL6HE5nXfd9NzWIquU7RpA" });
-      console.log("FCM token", token);
-    } else if (permission === "denied") {
-      toastCustom("Notification permission deneid");
-    } else {
-      toastCustom("Notification permission deneid");
-    }
-  }
 
-  useEffect(() => {
-    requestPermission();
-    const unsubscribe = listenForMessage((payload) => {
-      toastCustom(`${payload.notification.title}` + "\n" + `${payload.notification.body}`);
-    })
-    return () => unsubscribe()
-  }, [])
   return (
     <>
       <Toaster
