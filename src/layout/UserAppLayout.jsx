@@ -30,16 +30,26 @@ const UserAppLayout = () => {
     return () => unsubscribe()
   }, [])
 
+  /**
+   * RESPONSIVE DASHBOARD LAYOUT TIP:
+   * 1. NEVER wrap both a sidebar (Navbar) and <Outlet /> in a `flex items-center justify-center` container.
+   *    A dashboard layout needs a continuous horizontal shell: `flex min-h-screen w-full`.
+   * 2. The main content area MUST have:
+   *    - `flex-1`: fills remaining horizontal width.
+   *    - `min-w-0`: prevents flex child elements (like charts/tables/pre tags) from blowing out the width.
+   *    - `min-h-screen overflow-y-auto`: enables vertical scrolling on mobile when content is long.
+   *    - `pt-16 lg:pt-6`: leaves space for the mobile hamburger button (`top-4 left-4`) on mobile screens!
+   */
   return (
     <UserDetailsProvider>
-      <div className='flex h-screen w-screen'>
-        <PageBackground>
-          <UserNavbar />
+      <div className="min-h-screen w-full flex bg-[#080B11] text-slate-100 overflow-x-hidden relative">
+        <UserNavbar />
+        <main className="flex-1 min-w-0 min-h-screen overflow-y-auto pt-16 lg:pt-6 px-3 sm:px-6 lg:px-8 pb-12">
           <Outlet />
-        </PageBackground>
+        </main>
       </div>
     </UserDetailsProvider>
-  )
-}
+  );
+};
 
-export default UserAppLayout
+export default UserAppLayout;

@@ -65,10 +65,15 @@ const Landing = () => {
         <PageBackground>
             <GlassContainer>
 
-                {/* Hero */}
+                {/* 
+                 * RESPONSIVE TYPOGRAPHY TIP:
+                 * Never use static desktop font sizes like `text-6xl` directly on mobile.
+                 * Always start mobile-first: `text-2xl sm:text-4xl md:text-5xl lg:text-6xl`.
+                 * Also avoid `overflow-hidden` on wrapping text containers, which can cut off descending characters or extra lines.
+                 */}
                 <div
                     aria-label="descp"
-                    className="font-extrabold text-white tracking-wide text-4xl overflow-hidden flex justify-center"
+                    className="w-full flex justify-center text-center px-2 min-h-[90px] sm:min-h-[120px] md:min-h-[140px] items-center"
                 >
                     <TypeAnimation
                         sequence={[
@@ -81,14 +86,18 @@ const Landing = () => {
                         ]}
                         speed={40}
                         repeat={Infinity}
-                        className="text-6xl md:text-7xl font-extrabold text-white max-w-4xl leading-tight"
+                        className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-white max-w-4xl leading-tight sm:leading-snug tracking-tight"
                     />
                 </div>
 
-                {/* Tool sections */}
+                {/* 
+                 * RESPONSIVE GRID / FLEX TIP:
+                 * Use `w-full`, `flex flex-col md:flex-row`, and `items-center` so cards 
+                 * stack gracefully one above another on mobile and sit side-by-side on desktop.
+                 */}
                 <div
                     aria-label="sections"
-                    className="flex justify-center gap-8 flex-wrap"
+                    className="flex flex-col lg:flex-row justify-center items-center gap-6 sm:gap-8 w-full"
                 >
                     {sections.map((section) => (
                         <BigContainer

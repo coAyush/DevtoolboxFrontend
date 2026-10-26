@@ -11,10 +11,14 @@ const Signup = () => {
   const [email, setEmail] = useState("");
   const navigate = useNavigate();
 
+  /**
+   * RESPONSIVE MODAL PAGE TIP:
+   * Avoid `overflow-hidden` on outer page wrappers so mobile keyboards don't break accessibility.
+   */
   return (
-    <div className="overflow-hidden min-h-screen w-full flex items-center justify-center">
+    <div className="min-h-screen w-full flex items-center justify-center overflow-x-hidden">
       <PageBackground>
-        <Terminal className="h-[92vh] max-h-[880px] w-[94vw] max-w-6xl items-center justify-center p-2 sm:p-4 z-10 relative">
+        <Terminal className="min-h-[550px] h-[92vh] max-h-[880px] w-[96vw] sm:w-[94vw] max-w-6xl items-center justify-center p-1 sm:p-4 z-10 relative">
           {step === 1 && (
             <SignupContainer
               setStep={setStep}
@@ -44,3 +48,4 @@ const Signup = () => {
 };
 
 export default Signup;
+

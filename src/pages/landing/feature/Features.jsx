@@ -37,18 +37,28 @@ const Features = () => {
     ];
 
     return (
-        <>
-            <PageBackground>
-                <div className="min-h-screen flex flex-col items-center justify-center gap-4 relative">
-                    <div aria-label="tagline" className="flex flex-col gap-0.5 absolute top-4 left-[36%]">
-                        <h1 className="font-bold text-4xl text-white text-center tracking-tight">Everything You Need</h1>
-                        <p className="text-center text-muted-foreground">One toolbox infinte possibilities</p>
-                    </div>
-                    <FeatureCard content={featureContent} />
+        <PageBackground>
+            {/* 
+             * RESPONSIVE LAYOUT TIP:
+             * AVOID using `absolute top-4 left-[36%]` for headings!
+             * Absolute positioning with percentage offsets breaks instantly on mobile devices.
+             * Instead, use standard document flow: `flex flex-col items-center`,
+             * responsive margins/paddings, and proper text scaling.
+             */}
+            <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 flex flex-col items-center gap-8 sm:gap-12">
+                <div aria-label="tagline" className="flex flex-col items-center gap-2 text-center max-w-2xl">
+                    <h1 className="font-bold text-3xl sm:text-4xl md:text-5xl text-white tracking-tight">
+                        Everything You Need
+                    </h1>
+                    <p className="text-sm sm:text-base text-slate-400">
+                        One toolbox, infinite possibilities
+                    </p>
                 </div>
-            </PageBackground>
-        </>
-    )
-}
+
+                <FeatureCard content={featureContent} />
+            </div>
+        </PageBackground>
+    );
+};
 
 export default Features;

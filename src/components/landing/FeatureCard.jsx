@@ -1,36 +1,47 @@
+/**
+ * RESPONSIVE CSS GRID TIP:
+ * 1. Always use breakpoint-based columns:
+ *    `grid-cols-1 sm:grid-cols-2 lg:grid-cols-3`
+ *    This gives 1 column on phones, 2 on tablets, and 3 on desktops.
+ * 2. Avoid hacky heights like `h-[130%]` or `w-[90%]` inside grid items.
+ *    Grid items should be `w-full h-full` so the grid controls layout predictably.
+ * 3. Use reasonable gaps like `gap-4 sm:gap-6` rather than `gap-y-20` on mobile.
+ */
 const FeatureCard = ({ content }) => {
     return (
-        <div className="grid grid-cols-1 md:grid-cols-3 p-2 gap-x-5 gap-y-20">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6 w-full">
             {content.map((item, i) => (
                 <div
                     key={i}
                     className="
                         relative
                         p-[1px]
-                        rounded-xl
+                        rounded-2xl
                         overflow-hidden
                         bg-gradient-to-r
                         from-cyan-400
                         to-purple-500
-                        hover:animate-pulse
-                        h-[130%]
-                        min-h-[200px]
-                        w-[90%]
+                        transition-all duration-300
+                        hover:scale-[1.02]
+                        hover:shadow-[0_0_25px_rgba(34,211,238,0.25)]
+                        w-full
+                        h-full
                     "
                 >
                     <div
                         className="
                             h-full
-                            rounded-xl
-                            bg-slate-950
-                            p-5
+                            rounded-2xl
+                            bg-slate-950/90
+                            backdrop-blur-xl
+                            p-5 sm:p-6
                             flex flex-col
-                            gap-2
+                            gap-3
                         "
                     >
-                        <div className="text-white text-lg">{item.logo}</div>
-                        <div className="mt-1.5 text-cyan-400 text-xl">{item.tag}</div>
-                        <div className="text-slate-400 text-lg">{item.text}</div>
+                        <div className="text-white">{item.logo}</div>
+                        <h3 className="text-cyan-400 text-lg sm:text-xl font-bold">{item.tag}</h3>
+                        <p className="text-slate-400 text-sm sm:text-base leading-relaxed">{item.text}</p>
                     </div>
                 </div>
             ))}
@@ -38,4 +49,4 @@ const FeatureCard = ({ content }) => {
     );
 };
 
-export default FeatureCard;
+export default FeatureCard;
