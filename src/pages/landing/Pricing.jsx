@@ -57,13 +57,18 @@ const Pricing = () => {
             </div>
 
 
-            {/* Pricing Type Selector */}
+            {/* 
+             * RESPONSIVE TOGGLE / TAB BAR TIP:
+             * Don't lock the tab container to a rigid height like `h-12`.
+             * Instead use `min-h-12 h-auto py-1` and responsive font sizes (`text-xs sm:text-sm`)
+             * so labels on mobile phones don't wrap awkwardly or get cut off.
+             */}
             <div
                 className="
                     relative
                     w-full
-                    max-w-lg
-                    h-12
+                    max-w-md sm:max-w-lg
+                    min-h-12 h-auto
                     rounded-xl
                     p-[1px]
                     bg-gradient-to-r
@@ -78,13 +83,16 @@ const Pricing = () => {
                         relative
                         w-full
                         h-full
+                        min-h-[46px]
                         rounded-xl
                         bg-slate-950/95
                         backdrop-blur-xl
                         flex
                         items-center
                         justify-between
-                        px-4
+                        px-2.5 sm:px-4
+                        py-1
+                        gap-1 sm:gap-2
                     "
                 >
 
@@ -94,13 +102,13 @@ const Pricing = () => {
                         onClick={() => setRole("user")}
                         className={`
                             flex-1
-                            text-sm
+                            text-xs sm:text-sm
                             font-medium
                             transition-all
                             duration-300
                             focus-visible:outline-none
                             ${role === "user"
-                                ? "text-cyan-400"
+                                ? "text-cyan-400 font-semibold"
                                 : "text-slate-500 hover:text-slate-300"
                             }
                         `}
@@ -126,12 +134,13 @@ const Pricing = () => {
                             focus-visible:ring-2
                             focus-visible:ring-purple-400/40
                             rounded-md
+                            p-1
                         "
                     >
                         {role === "user" ? (
-                            <FaToggleOff size={34} />
+                            <FaToggleOff size={28} className="sm:w-8 sm:h-8" />
                         ) : (
-                            <FaToggleOn size={34} />
+                            <FaToggleOn size={28} className="sm:w-8 sm:h-8" />
                         )}
                     </button>
                     <button
@@ -139,13 +148,13 @@ const Pricing = () => {
                         onClick={() => setRole("developer")}
                         className={`
                             flex-1
-                            text-sm
+                            text-xs sm:text-sm
                             font-medium
                             transition-all
                             duration-300
                             focus-visible:outline-none
                             ${role === "developer"
-                                ? "text-purple-400"
+                                ? "text-purple-400 font-semibold"
                                 : "text-slate-500 hover:text-slate-300"
                             }
                         `}
@@ -155,7 +164,7 @@ const Pricing = () => {
 
                 </div>
             </div>
-            <p className="mt-5 text-sm text-slate-500">
+            <p className="mt-4 sm:mt-5 text-xs sm:text-sm text-slate-500">
                 Showing{" "}
                 <span
                     className={
@@ -168,7 +177,7 @@ const Pricing = () => {
                 </span>{" "}
                 plans
             </p>
-            <div className="w-full max-w-6xl mt-12">
+            <div className="w-full max-w-6xl mt-6 sm:mt-10">
                 {role === "user" ? (
                     <div className="text-center text-slate-500">
                     </div>
@@ -177,7 +186,8 @@ const Pricing = () => {
                     </div>
                 )}
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {/* Responsive grid for pricing plans */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full max-w-6xl justify-items-center mb-12">
                 {packageData.filter((item) => item.role.toLowerCase() === role).map((plan) => (
                     <PricingComponent key={plan.tier} data={plan} />
                 ))}

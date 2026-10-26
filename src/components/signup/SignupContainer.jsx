@@ -69,28 +69,33 @@ const SignupContainer = ({ desc, setStep, setSignupStep, onSuccess, form: parent
     };
     return (
         <div className="relative w-full max-w-[560px] p-[2px] rounded-[28px] bg-gradient-to-br from-cyan-400/90 via-cyan-400/20 to-purple-500/80 shadow-[0_0_50px_-10px_rgba(34,211,238,0.3),0_0_30px_-10px_rgba(168,85,247,0.2)] z-20 transition-all duration-300">
-            <div className="w-full bg-[#0b101b]/95 backdrop-blur-2xl rounded-[26px] p-7 sm:p-9 flex flex-col items-center gap-4">
+            {/*
+             * RESPONSIVE MODAL/CARD TIP:
+             * Using `p-4 sm:p-7 md:p-9` gives ample padding on desktop while saving space on phones.
+             * `flex-col sm:flex-row` ensures the role cards stack vertically on small devices.
+             */}
+            <div className="w-full bg-[#0b101b]/95 backdrop-blur-2xl rounded-[22px] sm:rounded-[26px] p-4 sm:p-7 md:p-9 flex flex-col items-center gap-4">
                 <h2 aria-label="heading" className="font-extrabold text-2xl sm:text-3xl text-white text-center tracking-tight">
                     Welcome to DevToolBox
                 </h2>
-                <p aria-label="description" className="text-slate-400 text-sm sm:text-[15px] font-normal text-center -mt-1 tracking-normal max-w-sm sm:max-w-md">
+                <p aria-label="description" className="text-slate-400 text-xs sm:text-sm md:text-[15px] font-normal text-center -mt-1 tracking-normal max-w-sm sm:max-w-md">
                     {desc || "Select your workspace type to personalize your experience"}
                 </p>
-                <div className="flex justify-between w-full mt-1.5 gap-3.5 sm:gap-4">
+                <div className="flex flex-col sm:flex-row justify-between w-full mt-1.5 gap-3 sm:gap-4">
                     <div
                         onClick={() => { setForm({ ...form, role: "USER" }); setIsDeveloper(false) }}
-                        className={`rounded-2xl flex flex-col justify-between w-1/2 p-4 sm:p-5 transition-all duration-200 cursor-pointer ${form.role === "USER"
+                        className={`rounded-2xl flex flex-col justify-between w-full sm:w-1/2 p-3.5 sm:p-5 transition-all duration-200 cursor-pointer ${form.role === "USER"
                             ? "border-2 border-cyan-400 bg-cyan-950/30 shadow-[0_0_20px_rgba(34,211,238,0.25)] ring-1 ring-cyan-400/30"
                             : "border border-slate-700/60 bg-slate-900/50 hover:border-slate-500 hover:bg-slate-800/40 hover:-translate-y-0.5"
                             }`}
                     >
-                        <div className="flex items-center justify-between w-full mb-3.5">
-                            <WandSparkles size={28} className="text-cyan-400" />
-                            <Folders size={28} className="text-cyan-400" />
+                        <div className="flex items-center justify-between w-full mb-2.5 sm:mb-3.5">
+                            <WandSparkles size={24} className="text-cyan-400" />
+                            <Folders size={24} className="text-cyan-400" />
                         </div>
                         <div>
-                            <div className="font-bold text-white text-base sm:text-[17px]">Normal User</div>
-                            <div className="text-xs sm:text-[13px] leading-relaxed text-slate-400 font-normal mt-1.5">
+                            <div className="font-bold text-white text-sm sm:text-base md:text-[17px]">Normal User</div>
+                            <div className="text-xs sm:text-[13px] leading-relaxed text-slate-400 font-normal mt-1">
                                 Instant browser productivity tools for creators and teams
                             </div>
                         </div>
@@ -99,22 +104,22 @@ const SignupContainer = ({ desc, setStep, setSignupStep, onSuccess, form: parent
                     {/* Developer Card */}
                     <div
                         onClick={() => { setForm({ ...form, role: "DEVELOPER" }); setIsDeveloper(true) }}
-                        className={`rounded-2xl flex flex-col justify-between w-1/2 p-4 sm:p-5 transition-all duration-200 cursor-pointer ${isDeveloper
+                        className={`rounded-2xl flex flex-col justify-between w-full sm:w-1/2 p-3.5 sm:p-5 transition-all duration-200 cursor-pointer ${isDeveloper
                             ? "border-2 border-cyan-400 bg-cyan-950/30 shadow-[0_0_20px_rgba(34,211,238,0.25)] ring-1 ring-cyan-400/30"
                             : "border border-slate-700/60 bg-slate-900/50 hover:border-slate-500 hover:bg-slate-800/40 hover:-translate-y-0.5"
                             }`}
                     >
-                        <div className="flex items-center justify-between w-full mb-3.5">
-                            <div className="w-8 h-8 rounded-lg border border-slate-600/70 bg-slate-800/40 flex items-center justify-center text-slate-300 font-mono text-sm font-bold">
+                        <div className="flex items-center justify-between w-full mb-2.5 sm:mb-3.5">
+                            <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-lg border border-slate-600/70 bg-slate-800/40 flex items-center justify-center text-slate-300 font-mono text-xs sm:text-sm font-bold">
                                 {"{ }"}
                             </div>
-                            <div className="w-8 h-8 rounded-lg border border-slate-600/70 bg-slate-800/40 flex items-center justify-center text-slate-300 font-mono text-sm font-bold">
+                            <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-lg border border-slate-600/70 bg-slate-800/40 flex items-center justify-center text-slate-300 font-mono text-xs sm:text-sm font-bold">
                                 {"$_"}
                             </div>
                         </div>
                         <div>
-                            <div className="font-bold text-white text-base sm:text-[17px]">Developer</div>
-                            <div className="text-xs sm:text-[13px] leading-relaxed text-slate-400 font-normal mt-1.5">
+                            <div className="font-bold text-white text-sm sm:text-base md:text-[17px]">Developer</div>
+                            <div className="text-xs sm:text-[13px] leading-relaxed text-slate-400 font-normal mt-1">
                                 REST APIs, API Keys, webhooks, and SDKs for builders
                             </div>
                         </div>
