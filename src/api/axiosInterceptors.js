@@ -1,16 +1,40 @@
 import { usePublicApi, usePrivateApi, refreshApi } from "./axiosInstance";
 import { toastError } from "../util/toat";
 
-const handleResponse = (response) => {
+const handleResponse = async (response) => {
+    // If the response is a binary Blob (e.g., downloaded PDF)
+    if (response.data instanceof Blob || response.config?.responseType === 'blob') {
+        // If the server returned an error JSON inside a blob response
+        if (response.data?.type === 'application/json') {
+            try {
+                const text = await response.data.text();
+                const parsed = JSON.parse(text);
+                if (parsed.code === 8) {
+                    toastError(parsed.message ?? "Something went wrong");
+                    return Promise.reject(new Error(parsed.message));
+                }
+                return {
+                    code: parsed.code,
+                    message: parsed.message,
+                    status: parsed.status,
+                    data: parsed.data?.details ?? null
+                };
+            } catch {
+                return response.data;
+            }
+        }
+        return response.data;
+    }
+
     if (response.data?.code === 8) {
         toastError(response.data.message ?? "Something went wrong");
         return Promise.reject(new Error(response.data.message));
     }
     console.log("response", response);
-    const code = response.data.code
-    const message = response.data.message;
-    const status = response.data.status;
-    const data = response.data.data?.details ?? null
+    const code = response.data?.code;
+    const message = response.data?.message;
+    const status = response.data?.status;
+    const data = response.data?.data?.details ?? null;
     console.log(code, message, status, data);
 
     return { code, message, status, data };
@@ -52,5 +76,13 @@ const handlePrivateError = async (error) => {
 const handlePublicError = (error) => {
     return Promise.reject(error);
 };
+// Automatically strip Content-Type for FormData so Axios / Browser sets multipart/form-data boundary
+usePrivateApi.interceptors.request.use((config) => {
+    if (config.data instanceof FormData) {
+        delete config.headers['Content-Type'];
+    }
+    return config;
+});
+
 usePublicApi.interceptors.response.use(handleResponse, handlePublicError);
 usePrivateApi.interceptors.response.use(handleResponse, handlePrivateError);

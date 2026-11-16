@@ -87,6 +87,10 @@ export const router = createBrowserRouter([
                 element: <UserTools />
             },
             {
+                path: "tools/:toolSlug",
+                element: <UserTools />
+            },
+            {
                 path: "pricing",
                 element: <UserPricicng />
             }
