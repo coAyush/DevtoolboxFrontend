@@ -10,7 +10,8 @@ import {
     Sliders,
     Sparkles,
     Hash,
-    AlignLeft
+    AlignLeft,
+    Link2
 } from "lucide-react";
 
 /**
@@ -55,6 +56,19 @@ export const CATEGORY_METADATA = {
  * Allows easy extension for future tools!
  */
 export const TOOLS_CATALOG = {
+    "url-shortener": {
+        slug: "url-shortener",
+        name: "URL Shortener",
+        categoryId: 2,
+        categoryName: "Productivity Tools",
+        toolId: 2,
+        subToolId: 4,
+        icon: Link2,
+        badge: "Live Endpoint",
+        description: "Generate compact, shareable short links with custom aliases and track real-time click analytics.",
+        isAvailable: true,
+        endpoint: "/api/users/tools/shorten-url",
+    },
     "qr-code": {
         slug: "qr-code",
         name: "QR Code Generator",
@@ -163,6 +177,16 @@ export const SUB_TOOLS_BY_CATEGORY = {
 
     // Category 2: Productivity Tools
     2: [
+        {
+            slug: "url-shortener",
+            name: "URL Shortener",
+            toolId: 2,
+            subToolId: 4,
+            icon: Link2,
+            badge: "Available",
+            description: "Shorten lengthy links, set custom aliases, and monitor real-time click traffic.",
+            isAvailable: true,
+        },
         {
             slug: "qr-code",
             name: "QR Code Generator",

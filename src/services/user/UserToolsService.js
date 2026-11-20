@@ -153,3 +153,45 @@ export const mergePdfApi = async ({ files, toolId = 3, subToolId = 1 }) => {
         throw error;
     }
 };
+
+/**
+ * Service to shorten a URL.
+ * Backend Endpoint: POST /api/users/tools/shorten-url
+ * @param {Object} payload - { longUrl, alias, toolId, subToolId }
+ */
+export const shortenUrlApi = async ({ longUrl, alias, toolId = 2, subToolId = 4 }) => {
+    try {
+        const payload = {
+            longUrl: longUrl.trim(),
+            toolId: Number(toolId),
+            subToolId: Number(subToolId),
+        };
+        if (alias && alias.trim()) {
+            payload.alias = alias.trim();
+        }
+
+        const response = await usePrivateApi.post("/users/tools/shorten-url", payload);
+        return response;
+    } catch (error) {
+        console.error("Failed to shorten URL:", error);
+        throw error;
+    }
+};
+
+/**
+ * Service to fetch URL shortener analytics and history.
+ * Backend Endpoint: POST /api/users/tools/url
+ * @param {Object} payload - { toolId, subToolId }
+ */
+export const getUrlAnalyticsApi = async ({ toolId = 2, subToolId = 4 } = {}) => {
+    try {
+        const response = await usePrivateApi.post("/users/tools/url", {
+            toolId: Number(toolId),
+            subToolId: Number(subToolId),
+        });
+        return response;
+    } catch (error) {
+        console.error("Failed to fetch URL analytics:", error);
+        throw error;
+    }
+};

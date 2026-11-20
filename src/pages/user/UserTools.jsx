@@ -22,6 +22,7 @@ import PdfCompressorTool from "../../components/user/tools/implementations/PdfCo
 import ImageToPdfTool from "../../components/user/tools/implementations/ImageToPdfTool";
 import WordToPdfTool from "../../components/user/tools/implementations/WordToPdfTool";
 import PdfMergeTool from "../../components/user/tools/implementations/PdfMergeTool";
+import UrlShortenerTool from "../../components/user/tools/implementations/UrlShortenerTool";
 
 /**
  * Main User Tools Suite Page.
@@ -177,6 +178,7 @@ const UserTools = () => {
                 onBack={handleBackToSuite}
             >
                 {/* Dynamically render the respective tool controller */}
+                {toolSlug === "url-shortener" && <UrlShortenerTool tool={currentTool} />}
                 {toolSlug === "qr-code" && <QrCodeTool tool={currentTool} />}
                 {toolSlug === "pdf-compressor" && <PdfCompressorTool tool={currentTool} />}
                 {toolSlug === "image-to-pdf" && <ImageToPdfTool tool={currentTool} />}
