@@ -8,12 +8,9 @@ const UserNavbar = () => {
     const [isOpen, setIsOpen] = useState(false);
     console.log("in navbar");
     if (loading)
-        return <Loader2 />
-    console.log(user);
-    const details = user.userDetails;
-    console.log("details");
-
-    console.log(details);
+        return <Loader2 className="animate-spin text-cyan-400 m-6" />
+    
+    const details = user?.userDetails || {};
 
 
     const Links = {

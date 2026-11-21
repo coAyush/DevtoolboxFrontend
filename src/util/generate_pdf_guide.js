@@ -563,14 +563,40 @@ export const generatePdfGuide = (outputPath) => {
         ["src/components/user/tools/ToolPageWrapper.jsx", "Unified workspace header with breadcrumbs and Back button."],
         ["src/components/user/tools/fileDownloadHelper.js", "Utilities for triggering browser file downloads and formatting bytes."],
         ["src/components/user/tools/implementations/", "Houses QrCodeTool, PdfCompressorTool, ImageToPdfTool, etc."],
+        ["src/pages/user/UserPricicng.jsx", "User subscription plans and upgrade modal (GET /api/users/plans)."],
+        ["src/pages/user/UserProfile.jsx", "User profile, verification status, and monthly tool quota tracker (GET /api/users/profile-details)."],
+        ["src/services/user/UserProfileService.js", "User plans and profile details API services."],
         ["src/routes/DevToolBoxRoutes.jsx", "Application routing table, loaders, and protected route definitions."],
     ];
     doc.addTable(["File / Directory Path", "Architectural Role & Description"], dirMap);
 
     // ---------------------------------------------------------------------
-    // PAGE 7: TECHNICAL INTERVIEW PLAYBOOK
+    // PAGE 7: USER PRICING & PROFILE ARCHITECTURE
     // ---------------------------------------------------------------------
-    doc.addHeading1("7. Technical Interview Masterclass");
+    doc.addHeading1("7. User Pricing & Profile Architecture");
+    doc.addParagraph(
+        "The User Pricing and Profile modules provide account management, subscription plan upgrades, and real-time API quota tracking."
+    );
+
+    doc.addHeading2("A. Subscription Pricing Engine (GET /api/users/plans)");
+    doc.addParagraph(
+        "• Data Contract: PriceResponseDto contains id, amount, role, tier ('FREE', 'PRO'), duration, and isActive.\n" +
+        "• Tier Awareness: Simultaneously checks getUserProfileApi() to identify the user's active tier.\n" +
+        "• Smart UI: The active plan is tagged with 'Active Plan', preventing duplicate subscriptions.\n" +
+        "• Pro Highlights: Gradient border, glowing shadow, 'Most Popular' badge, and an interactive confirmation modal."
+    );
+
+    doc.addHeading2("B. User Profile & Real-Time Usage Quota (GET /api/users/profile-details)");
+    doc.addParagraph(
+        "• Data Contract: UserProfileResponseDto returns identity (name, email, phone, role, provider, emailVerified), subscription (tier, status, start/end dates), and usage metrics (monthlyUsage, usageLimit, remainingUsage).\n" +
+        "• Visual Quota Bar: Computes (monthlyUsage / usageLimit) * 100% with gradient progress styling (cyan-purple under 90%, warning amber/rose when quota is low).\n" +
+        "• Resilient Layout: UserDetailsProvider auto-fetches user details if a user reloads directly on /user/profile or /user/pricing, eliminating sidebar freeze."
+    );
+
+    // ---------------------------------------------------------------------
+    // PAGE 8: TECHNICAL INTERVIEW PLAYBOOK
+    // ---------------------------------------------------------------------
+    doc.addHeading1("8. Technical Interview Masterclass");
     doc.addParagraph(
         "When interviewers ask you about DevToolBox or how you built the Tool Suite, use these structured answers to demonstrate senior-level engineering depth."
     );
@@ -590,6 +616,18 @@ export const generatePdfGuide = (outputPath) => {
     doc.addCallout(
         "Question 3: 'How did you ensure state isolation and UX responsiveness?'",
         "Answer: 'Each tool controller maintains its own isolated state machine (file drag-and-drop, validation, progress loaders, and download triggers). For QR code generation, I implemented client-side localStorage caching to persist the user's recent generations across page refreshes. For PDF merging, I implemented an interactive reordering array so users can resequence documents before dispatching. Furthermore, I used Lucide icon sets, CSS backdrop-blur, and responsive grid breakpoints (grid-cols-1 to sm:grid-cols-2 to lg:grid-cols-3) to ensure seamless performance across mobile and desktop viewports.'",
+        "interview"
+    );
+
+    doc.addCallout(
+        "Question 4: 'How did you design the User Profile & Usage Quota Tracker?'",
+        "Answer: 'I established a single-call data contract querying GET /api/users/profile-details which returns identity, subscription tier, and monthly usage metrics. On the frontend, I developed a reactive metric dashboard with a dynamic SVG/CSS gradient progress bar showing the exact percentage of monthly requests consumed (monthlyUsage / usageLimit * 100). I included threshold warnings when quota drops below 10%, an on-demand refresh trigger, and an automatic layout fallback in UserDetailsProvider so direct URL refreshes never leave the sidebar in an unauthenticated or loading freeze.'",
+        "interview"
+    );
+
+    doc.addCallout(
+        "Question 5: 'How does the Pricing page link dynamically with user subscriptions?'",
+        "Answer: 'The /user/pricing page pulls live plan pricing from /api/users/plans and cross-references the user's active tier. If the user is on the FREE tier, the card renders an active indicator with disabled actions, while the PRO card displays an upgrade CTA and a breakdown of quota expansion (from 200 to 500 requests). An interactive modal allows confirming the tier upgrade with instant toast notifications and seamless checkout navigation.'",
         "interview"
     );
 

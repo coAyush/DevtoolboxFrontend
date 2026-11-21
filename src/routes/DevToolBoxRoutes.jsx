@@ -19,6 +19,7 @@ import { getTools } from "../services/landing/Tools";
 import UserAppLayout from "../layout/UserAppLayout";
 import UserTools from "../pages/user/UserTools";
 import UserPricicng from "../pages/user/UserPricicng";
+import UserProfile from "../pages/user/UserProfile";
 import { dashboardRedirect } from "../services/user/DahboardRedirect";
 import UserDashboard from "../components/user/Dashboard";
 import { getDashboardDetails } from "../services/user/UserDashboardService";
@@ -93,6 +94,10 @@ export const router = createBrowserRouter([
             {
                 path: "pricing",
                 element: <UserPricicng />
+            },
+            {
+                path: "profile",
+                element: <UserProfile />
             }
         ]
     }
