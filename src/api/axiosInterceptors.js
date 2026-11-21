@@ -1,5 +1,5 @@
 import { usePublicApi, usePrivateApi, refreshApi } from "./axiosInstance";
-import { toastError } from "../util/toat";
+import { toastError, toastLimit } from "../util/toat";
 
 const handleResponse = async (response) => {
     // If the response is a binary Blob (e.g., downloaded PDF)
@@ -30,6 +30,7 @@ const handleResponse = async (response) => {
         toastError(response.data.message ?? "Something went wrong");
         return Promise.reject(new Error(response.data.message));
     }
+
     console.log("response", response);
     const code = response.data?.code;
     const message = response.data?.message;
@@ -52,8 +53,18 @@ const refreshAccessToken = () => {
 
 const handlePrivateError = async (error) => {
     const originalRequest = error.config;
-    const status = error.response?.status;        // ?. so network errors don't crash
-
+    const status = error.response?.status;
+    const message = error.response?.data?.message;
+    const errorStatus = error.response?.data?.status
+    // ?. so network errors don't crash
+    console.log(error.response);
+    if (status === 403) {
+        if (errorStatus == "LIMIT_EXCEEDED") {
+            toastLimit(message)
+            error.isLimitExceeded = true;
+            return Promise.reject(error);
+        }
+    }
     // not a 401, or we already retried once -> give up
     if (status !== 401 || !originalRequest || originalRequest._retry) {
         return Promise.reject(error);

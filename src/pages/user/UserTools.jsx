@@ -23,6 +23,9 @@ import ImageToPdfTool from "../../components/user/tools/implementations/ImageToP
 import WordToPdfTool from "../../components/user/tools/implementations/WordToPdfTool";
 import PdfMergeTool from "../../components/user/tools/implementations/PdfMergeTool";
 import UrlShortenerTool from "../../components/user/tools/implementations/UrlShortenerTool";
+import WordCounterTool from "../../components/user/tools/implementations/WordCounterTool";
+import UuidGeneratorTool from "../../components/user/tools/implementations/UuidGeneratorTool";
+import ImageCompressorTool from "../../components/user/tools/implementations/ImageCompressorTool";
 
 /**
  * Main User Tools Suite Page.
@@ -178,8 +181,11 @@ const UserTools = () => {
                 onBack={handleBackToSuite}
             >
                 {/* Dynamically render the respective tool controller */}
+                {toolSlug === "image-compressor" && <ImageCompressorTool tool={currentTool} />}
                 {toolSlug === "url-shortener" && <UrlShortenerTool tool={currentTool} />}
                 {toolSlug === "qr-code" && <QrCodeTool tool={currentTool} />}
+                {toolSlug === "uuid-generator" && <UuidGeneratorTool tool={currentTool} />}
+                {toolSlug === "word-counter" && <WordCounterTool tool={currentTool} />}
                 {toolSlug === "pdf-compressor" && <PdfCompressorTool tool={currentTool} />}
                 {toolSlug === "image-to-pdf" && <ImageToPdfTool tool={currentTool} />}
                 {toolSlug === "word-to-pdf" && <WordToPdfTool tool={currentTool} />}

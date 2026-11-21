@@ -1,0 +1,251 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [5 0 R 7 0 R 9 0 R 11 0 R] /Count 4 >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Courier >>
+endobj
+4 0 obj
+<< /Length 4434 >>
+stream
+0.04 0.07 0.13 rg 48 636 516 84 re f
+0.02 0.71 0.83 RG 2 w 48 636 516 84 re S
+BT 1 1 1 rg /F1 17 Tf 64 686 Td (URL Shortener & Analytics * The Easiest Guide) Tj ET
+BT 0.15 0.80 0.90 rg /F2 10 Tf 64 662 Td (How It Was Built Step-by-Step with Simple Code & Real-World Examples) Tj ET
+BT 0.6 0.7 0.8 rg /F2 8 Tf 64 648 Td (Easiest Practical Guide * Step-by-Step Code Walkthrough * Repeatable Formula) Tj ET
+0.02 0.71 0.83 rg 48 602 4 16 re f
+BT 0.95 0.98 1 rg /F1 13.5 Tf 60 604 Td (1. The Simple Big Picture \(The Restaurant Analogy\)) Tj ET
+BT 0.75 0.82 0.9 rg /F2 9 Tf 48 582 Td (Building a feature in React with a Spring Boot backend is exactly like ordering food in a restaurant. Once you) Tj ET
+BT 0.75 0.82 0.9 rg /F2 9 Tf 48 568.5 Td (grasp this 4-character story, you can build any tool or web application without hesitation!) Tj ET
+0.02 0.71 0.83 rg 50 553 3 3 re f
+BT 0.95 0.98 1 rg /F1 8.5 Tf 60 551 Td (1. The Customer \(React Component\): The user sits on the screen \(UrlShortenerTool.jsx\). They type a long link and) Tj ET
+BT 0.75 0.82 0.9 rg /F2 8.5 Tf 60 538.5 Td (an optional alias, then click the 'Shorten URL' button. The Customer wants a short URL and wants to see how many) Tj ET
+BT 0.75 0.82 0.9 rg /F2 8.5 Tf 60 526 Td (people clicked their links.) Tj ET
+0.02 0.71 0.83 rg 50 513.5 3 3 re f
+BT 0.95 0.98 1 rg /F1 8.5 Tf 60 511.5 Td (2. The Waiter \(UserToolsService.js\): The Customer does not walk into the kitchen. Instead, they tell the Waiter:) Tj ET
+BT 0.75 0.82 0.9 rg /F2 8.5 Tf 60 499 Td ('Take this longUrl, alias, toolId: 2, subToolId: 4 to the kitchen'. The Waiter uses axios to deliver the order.) Tj ET
+0.02 0.71 0.83 rg 50 486.5 3 3 re f
+BT 0.95 0.98 1 rg /F1 8.5 Tf 60 484.5 Td (3. The Kitchen \(Spring Boot Backend\): The Kitchen has 2 cooking stations: Station 1 \(/shorten-url\) saves the link) Tj ET
+BT 0.75 0.82 0.9 rg /F2 8.5 Tf 60 472 Td (into PostgreSQL and returns http://localhost:8080/examp. Station 2 \(/url\) returns the array of click stats and) Tj ET
+BT 0.75 0.82 0.9 rg /F2 8.5 Tf 60 459.5 Td (dates.) Tj ET
+0.02 0.71 0.83 rg 50 447 3 3 re f
+BT 0.95 0.98 1 rg /F1 8.5 Tf 60 445 Td (4. The Table \(React State useState\): The Waiter returns with the food. The Customer stores the result in React) Tj ET
+BT 0.75 0.82 0.9 rg /F2 8.5 Tf 60 432.5 Td (State: setGeneratedUrl\(result\) and setAnalytics\(list\). React instantly re-renders the shiny banner and the table!) Tj ET
+0.04 0.12 0.10 rg 48 362 516 56 re f
+0.10 0.75 0.50 RG 1 w 48 362 516 56 re S
+BT 0.20 0.90 0.60 rg /F1 9 Tf 62 402 Td (Why is this so simple?) Tj ET
+BT 0.85 0.90 0.95 rg /F2 8.5 Tf 62 388 Td (Every single feature in web development follows this exact loop: UI State -> Service Call -> Backend Response) Tj ET
+BT 0.85 0.90 0.95 rg /F2 8.5 Tf 62 375 Td (-> UI State Update. There is no magic!) Tj ET
+BT 0.25 0.82 0.92 rg /F1 11 Tf 48 346 Td (The Two Backend Endpoints \(From Your Postman Screenshots\)) Tj ET
+0.08 0.12 0.20 rg 48 313 516 16 re f
+0.25 0.35 0.50 RG 0.5 w 48 313 516 16 re S
+BT 0.95 0.98 1 rg /F1 8 Tf 54 317 Td (Endpoint) Tj ET
+BT 0.95 0.98 1 rg /F1 8 Tf 226 317 Td (What We Send \(Request\)) Tj ET
+BT 0.95 0.98 1 rg /F1 8 Tf 398 317 Td (What Backend Sends Back \(Response\)) Tj ET
+0.04 0.06 0.11 rg 48 297 516 16 re f
+0.15 0.20 0.30 RG 0.5 w 48 297 516 16 re S
+BT 0.80 0.86 0.92 rg /F2 7.5 Tf 54 301 Td (POST /api/users/tools/shorten-url) Tj ET
+BT 0.80 0.86 0.92 rg /F2 7.5 Tf 226 301 Td ({ longUrl, alias, toolId:2, subToolId:4 }) Tj ET
+BT 0.80 0.86 0.92 rg /F2 7.5 Tf 398 301 Td ({ details: 'http://localhost:8080/examp' }) Tj ET
+0.15 0.20 0.30 RG 0.5 w 48 281 516 16 re S
+BT 0.80 0.86 0.92 rg /F2 7.5 Tf 54 285 Td (POST /api/users/tools/url) Tj ET
+BT 0.80 0.86 0.92 rg /F2 7.5 Tf 226 285 Td ({ toolId:2, subToolId:4 }) Tj ET
+BT 0.80 0.86 0.92 rg /F2 7.5 Tf 398 285 Td ({ details: [ { id, shortUrl, clickCount, ... } ] }) Tj ET
+0.02 0.71 0.83 rg 48 259 4 16 re f
+BT 0.95 0.98 1 rg /F1 13.5 Tf 60 261 Td (2. Step 1: The Waiter \(Writing the API Service\)) Tj ET
+BT 0.75 0.82 0.9 rg /F2 9 Tf 48 239 Td (File: src/services/user/UserToolsService.js. We write two clean functions using our authenticated axios client) Tj ET
+BT 0.75 0.82 0.9 rg /F2 9 Tf 48 225.5 Td (\(usePrivateApi\). Notice how easy they are:) Tj ET
+0.2 0.25 0.35 RG 0.5 w 48 42 m 564 42 l S
+BT 0.45 0.55 0.65 rg /F2 8 Tf 48 30 Td (DevToolBox Easy Learning Series) Tj ET
+BT 0.45 0.55 0.65 rg /F2 8 Tf 504 30 Td (Page 1 of 4) Tj ET
+endstream
+endobj
+5 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R >> >> /Contents 4 0 R >>
+endobj
+6 0 obj
+<< /Length 4636 >>
+stream
+BT 0.45 0.55 0.65 rg /F2 8 Tf 48 760 Td (DevToolBox * URL Shortener & Analytics Beginner Guide) Tj ET
+0.2 0.25 0.35 RG 0.5 w 48 754 m 564 754 l S
+0.03 0.05 0.09 rg 48 563 516 157 re f
+0.18 0.22 0.32 RG 0.75 w 48 563 516 157 re S
+BT 0.30 0.85 0.95 rg /F3 7.5 Tf 60 709 Td (// 1. Function to Shorten a URL) Tj ET
+BT 0.30 0.85 0.95 rg /F3 7.5 Tf 60 698 Td (export const shortenUrlApi = async \({ longUrl, alias, toolId = 2, subToolId = 4 }\) => {) Tj ET
+BT 0.30 0.85 0.95 rg /F3 7.5 Tf 60 687 Td (    const payload = { longUrl: longUrl.trim\(\), toolId, subToolId };) Tj ET
+BT 0.30 0.85 0.95 rg /F3 7.5 Tf 60 676 Td (    if \(alias && alias.trim\(\)\) payload.alias = alias.trim\(\);) Tj ET
+BT 0.30 0.85 0.95 rg /F3 7.5 Tf 60 665 Td (    // Hits POST http://localhost:8080/api/users/tools/shorten-url) Tj ET
+BT 0.30 0.85 0.95 rg /F3 7.5 Tf 60 654 Td (    return await usePrivateApi.post\('/users/tools/shorten-url', payload\);) Tj ET
+BT 0.30 0.85 0.95 rg /F3 7.5 Tf 60 643 Td (};) Tj ET
+BT 0.30 0.85 0.95 rg /F3 7.5 Tf 60 632 Td () Tj ET
+BT 0.30 0.85 0.95 rg /F3 7.5 Tf 60 621 Td (// 2. Function to Get Click Analytics List) Tj ET
+BT 0.30 0.85 0.95 rg /F3 7.5 Tf 60 610 Td (export const getUrlAnalyticsApi = async \({ toolId = 2, subToolId = 4 }\) => {) Tj ET
+BT 0.30 0.85 0.95 rg /F3 7.5 Tf 60 599 Td (    // Hits POST http://localhost:8080/api/users/tools/url) Tj ET
+BT 0.30 0.85 0.95 rg /F3 7.5 Tf 60 588 Td (    return await usePrivateApi.post\('/users/tools/url', { toolId, subToolId }\);) Tj ET
+BT 0.30 0.85 0.95 rg /F3 7.5 Tf 60 577 Td (};) Tj ET
+0.02 0.71 0.83 rg 48 543 4 16 re f
+BT 0.95 0.98 1 rg /F1 13.5 Tf 60 545 Td (3. Step 2: The Menu Entry \(Registering the Tool\)) Tj ET
+BT 0.75 0.82 0.9 rg /F2 9 Tf 48 523 Td (File: src/components/user/tools/toolsRegistry.js. We tell DevToolBox that this tool exists so it shows up in) Tj ET
+BT 0.75 0.82 0.9 rg /F2 9 Tf 48 509.5 Td (Productivity Tools with a Link2 icon and creates the route /user/tools/url-shortener:) Tj ET
+0.03 0.05 0.09 rg 48 346 516 146 re f
+0.18 0.22 0.32 RG 0.75 w 48 346 516 146 re S
+BT 0.30 0.85 0.95 rg /F3 7.5 Tf 60 481 Td ('url-shortener': {) Tj ET
+BT 0.30 0.85 0.95 rg /F3 7.5 Tf 60 470 Td (    slug: 'url-shortener',) Tj ET
+BT 0.30 0.85 0.95 rg /F3 7.5 Tf 60 459 Td (    name: 'URL Shortener',) Tj ET
+BT 0.30 0.85 0.95 rg /F3 7.5 Tf 60 448 Td (    categoryId: 2,                    // Productivity Tools) Tj ET
+BT 0.30 0.85 0.95 rg /F3 7.5 Tf 60 437 Td (    toolId: 2,) Tj ET
+BT 0.30 0.85 0.95 rg /F3 7.5 Tf 60 426 Td (    subToolId: 4,                     // Matches backend tool ID) Tj ET
+BT 0.30 0.85 0.95 rg /F3 7.5 Tf 60 415 Td (    icon: Link2,) Tj ET
+BT 0.30 0.85 0.95 rg /F3 7.5 Tf 60 404 Td (    badge: 'Live Endpoint',) Tj ET
+BT 0.30 0.85 0.95 rg /F3 7.5 Tf 60 393 Td (    description: 'Shorten links, create custom aliases, and track clicks.',) Tj ET
+BT 0.30 0.85 0.95 rg /F3 7.5 Tf 60 382 Td (    isAvailable: true,) Tj ET
+BT 0.30 0.85 0.95 rg /F3 7.5 Tf 60 371 Td (    endpoint: '/api/users/tools/shorten-url',) Tj ET
+BT 0.30 0.85 0.95 rg /F3 7.5 Tf 60 360 Td (},) Tj ET
+0.02 0.71 0.83 rg 48 326 4 16 re f
+BT 0.95 0.98 1 rg /F1 13.5 Tf 60 328 Td (4. Step 3: The UI Component \(UrlShortenerTool.jsx\)) Tj ET
+BT 0.75 0.82 0.9 rg /F2 9 Tf 48 306 Td (File: src/components/user/tools/implementations/UrlShortenerTool.jsx. Let's break down the logic into 3 simple) Tj ET
+BT 0.75 0.82 0.9 rg /F2 9 Tf 48 292.5 Td (parts:) Tj ET
+BT 0.25 0.82 0.92 rg /F1 11 Tf 48 269 Td (Part A: React State Variables) Tj ET
+0.03 0.05 0.09 rg 48 183 516 69 re f
+0.18 0.22 0.32 RG 0.75 w 48 183 516 69 re S
+BT 0.30 0.85 0.95 rg /F3 7.5 Tf 60 241 Td (const [longUrl, setLongUrl] = useState\(''\);       // What user types) Tj ET
+BT 0.30 0.85 0.95 rg /F3 7.5 Tf 60 230 Td (const [alias, setAlias] = useState\(''\);           // Optional alias) Tj ET
+BT 0.30 0.85 0.95 rg /F3 7.5 Tf 60 219 Td (const [generatedUrl, setGeneratedUrl] = useState\(null\); // Result from server) Tj ET
+BT 0.30 0.85 0.95 rg /F3 7.5 Tf 60 208 Td (const [analytics, setAnalytics] = useState\([]\);   // List of shortened links) Tj ET
+BT 0.30 0.85 0.95 rg /F3 7.5 Tf 60 197 Td (const [loading, setLoading] = useState\(false\);    // Spinner on button) Tj ET
+BT 0.25 0.82 0.92 rg /F1 11 Tf 48 167 Td (Part B: Fetching Analytics on Page Load \(useEffect\)) Tj ET
+BT 0.75 0.82 0.9 rg /F2 9 Tf 48 150 Td (When the user opens the page, we automatically call the backend to get their link history and click counts:) Tj ET
+0.2 0.25 0.35 RG 0.5 w 48 42 m 564 42 l S
+BT 0.45 0.55 0.65 rg /F2 8 Tf 48 30 Td (DevToolBox Easy Learning Series) Tj ET
+BT 0.45 0.55 0.65 rg /F2 8 Tf 504 30 Td (Page 2 of 4) Tj ET
+endstream
+endobj
+7 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R >> >> /Contents 6 0 R >>
+endobj
+8 0 obj
+<< /Length 4244 >>
+stream
+BT 0.45 0.55 0.65 rg /F2 8 Tf 48 760 Td (DevToolBox * URL Shortener & Analytics Beginner Guide) Tj ET
+0.2 0.25 0.35 RG 0.5 w 48 754 m 564 754 l S
+0.03 0.05 0.09 rg 48 607 516 113 re f
+0.18 0.22 0.32 RG 0.75 w 48 607 516 113 re S
+BT 0.30 0.85 0.95 rg /F3 7.5 Tf 60 709 Td (const fetchAnalytics = async \(\) => {) Tj ET
+BT 0.30 0.85 0.95 rg /F3 7.5 Tf 60 698 Td (    const response = await getUrlAnalyticsApi\({ toolId: 2, subToolId: 4 }\);) Tj ET
+BT 0.30 0.85 0.95 rg /F3 7.5 Tf 60 687 Td (    // response.data holds the array of links from backend) Tj ET
+BT 0.30 0.85 0.95 rg /F3 7.5 Tf 60 676 Td (    setAnalytics\(response.data || []\);) Tj ET
+BT 0.30 0.85 0.95 rg /F3 7.5 Tf 60 665 Td (};) Tj ET
+BT 0.30 0.85 0.95 rg /F3 7.5 Tf 60 654 Td () Tj ET
+BT 0.30 0.85 0.95 rg /F3 7.5 Tf 60 643 Td (useEffect\(\(\) => {) Tj ET
+BT 0.30 0.85 0.95 rg /F3 7.5 Tf 60 632 Td (    fetchAnalytics\(\); // Runs once when page loads!) Tj ET
+BT 0.30 0.85 0.95 rg /F3 7.5 Tf 60 621 Td (}, []\);) Tj ET
+BT 0.25 0.82 0.92 rg /F1 11 Tf 48 591 Td (Part C: Submitting the Form \(handleShorten\)) Tj ET
+0.03 0.05 0.09 rg 48 406 516 168 re f
+0.18 0.22 0.32 RG 0.75 w 48 406 516 168 re S
+BT 0.30 0.85 0.95 rg /F3 7.5 Tf 60 563 Td (const handleShorten = async \(e\) => {) Tj ET
+BT 0.30 0.85 0.95 rg /F3 7.5 Tf 60 552 Td (    e.preventDefault\(\);) Tj ET
+BT 0.30 0.85 0.95 rg /F3 7.5 Tf 60 541 Td (    setLoading\(true\);) Tj ET
+BT 0.30 0.85 0.95 rg /F3 7.5 Tf 60 530 Td (    try {) Tj ET
+BT 0.30 0.85 0.95 rg /F3 7.5 Tf 60 519 Td (        const response = await shortenUrlApi\({ longUrl, alias, toolId: 2, subToolId: 4 }\);) Tj ET
+BT 0.30 0.85 0.95 rg /F3 7.5 Tf 60 508 Td (        // Server gives back: 'http://localhost:8080/examp') Tj ET
+BT 0.30 0.85 0.95 rg /F3 7.5 Tf 60 497 Td (        setGeneratedUrl\(response.data\);) Tj ET
+BT 0.30 0.85 0.95 rg /F3 7.5 Tf 60 486 Td (        toastCustom\('Short URL generated!'\);) Tj ET
+BT 0.30 0.85 0.95 rg /F3 7.5 Tf 60 475 Td (        setLongUrl\(''\); setAlias\(''\);) Tj ET
+BT 0.30 0.85 0.95 rg /F3 7.5 Tf 60 464 Td (        fetchAnalytics\(\); // Refresh table so the new link shows up instantly!) Tj ET
+BT 0.30 0.85 0.95 rg /F3 7.5 Tf 60 453 Td (    } finally {) Tj ET
+BT 0.30 0.85 0.95 rg /F3 7.5 Tf 60 442 Td (        setLoading\(false\);) Tj ET
+BT 0.30 0.85 0.95 rg /F3 7.5 Tf 60 431 Td (    }) Tj ET
+BT 0.30 0.85 0.95 rg /F3 7.5 Tf 60 420 Td (};) Tj ET
+0.02 0.71 0.83 rg 48 386 4 16 re f
+BT 0.95 0.98 1 rg /F1 13.5 Tf 60 388 Td (5. Step 4: The Door \(Hooking it into UserTools.jsx\)) Tj ET
+BT 0.75 0.82 0.9 rg /F2 9 Tf 48 366 Td (File: src/pages/user/UserTools.jsx. In the main page, we simply import our new tool and tell React: 'When the) Tj ET
+BT 0.75 0.82 0.9 rg /F2 9 Tf 48 352.5 Td (URL matches /user/tools/url-shortener, render UrlShortenerTool!') Tj ET
+0.03 0.05 0.09 rg 48 266 516 69 re f
+0.18 0.22 0.32 RG 0.75 w 48 266 516 69 re S
+BT 0.30 0.85 0.95 rg /F3 7.5 Tf 60 324 Td (// In UserTools.jsx:) Tj ET
+BT 0.30 0.85 0.95 rg /F3 7.5 Tf 60 313 Td (import UrlShortenerTool from '../../components/user/tools/implementations/UrlShortenerTool';) Tj ET
+BT 0.30 0.85 0.95 rg /F3 7.5 Tf 60 302 Td () Tj ET
+BT 0.30 0.85 0.95 rg /F3 7.5 Tf 60 291 Td (// Inside the tool router block:) Tj ET
+BT 0.30 0.85 0.95 rg /F3 7.5 Tf 60 280 Td ({toolSlug === 'url-shortener' && <UrlShortenerTool tool={currentTool} />}) Tj ET
+0.02 0.71 0.83 rg 48 246 4 16 re f
+BT 0.95 0.98 1 rg /F1 13.5 Tf 60 248 Td (6. Top 3 Beginner Traps & How to Avoid Them) Tj ET
+0.08 0.07 0.16 rg 48 157 516 69 re f
+0.55 0.35 0.95 RG 1 w 48 157 516 69 re S
+BT 0.75 0.60 1 rg /F1 9 Tf 62 210 Td (Trap 1: The Analytics Endpoint is POST, NOT GET!) Tj ET
+BT 0.85 0.90 0.95 rg /F2 8.5 Tf 62 196 Td (Most developers assume fetching data is always a GET request. But look at your Postman screenshot: the backend) Tj ET
+BT 0.85 0.90 0.95 rg /F2 8.5 Tf 62 183 Td (expects POST /api/users/tools/url with body { toolId: 2, subToolId: 4 }. If you used usePrivateApi.get\(\), the) Tj ET
+BT 0.85 0.90 0.95 rg /F2 8.5 Tf 62 170 Td (backend would respond with 405 Method Not Allowed!) Tj ET
+0.2 0.25 0.35 RG 0.5 w 48 42 m 564 42 l S
+BT 0.45 0.55 0.65 rg /F2 8 Tf 48 30 Td (DevToolBox Easy Learning Series) Tj ET
+BT 0.45 0.55 0.65 rg /F2 8 Tf 504 30 Td (Page 3 of 4) Tj ET
+endstream
+endobj
+9 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R >> >> /Contents 8 0 R >>
+endobj
+10 0 obj
+<< /Length 3102 >>
+stream
+BT 0.45 0.55 0.65 rg /F2 8 Tf 48 760 Td (DevToolBox * URL Shortener & Analytics Beginner Guide) Tj ET
+0.2 0.25 0.35 RG 0.5 w 48 754 m 564 754 l S
+0.04 0.12 0.10 rg 48 651 516 69 re f
+0.10 0.75 0.50 RG 1 w 48 651 516 69 re S
+BT 0.20 0.90 0.60 rg /F1 9 Tf 62 704 Td (Trap 2: Forgetting to Refresh the List After Shortening) Tj ET
+BT 0.85 0.90 0.95 rg /F2 8.5 Tf 62 690 Td (When the user creates a link, if you don't call fetchAnalytics\(\) right after setGeneratedUrl\(\), the new link) Tj ET
+BT 0.85 0.90 0.95 rg /F2 8.5 Tf 62 677 Td (won't show in the table until the user manually reloads the browser! Always re-fetch list data after a) Tj ET
+BT 0.85 0.90 0.95 rg /F2 8.5 Tf 62 664 Td (successful create mutation.) Tj ET
+0.05 0.09 0.16 rg 48 585 516 56 re f
+0.02 0.71 0.83 RG 1 w 48 585 516 56 re S
+BT 0.15 0.85 0.95 rg /F1 9 Tf 62 625 Td (Trap 3: URL Formatting & Trailing Spaces) Tj ET
+BT 0.85 0.90 0.95 rg /F2 8.5 Tf 62 611 Td (Users often copy URLs with accidental spaces or without https://. Always call .trim\(\) on input values and) Tj ET
+BT 0.85 0.90 0.95 rg /F2 8.5 Tf 62 598 Td (check for http/https to prevent backend validation exceptions.) Tj ET
+0.02 0.71 0.83 rg 48 565 4 16 re f
+BT 0.95 0.98 1 rg /F1 13.5 Tf 60 567 Td (7. The Copy-Paste Cheat Sheet for Any New Tool) Tj ET
+BT 0.75 0.82 0.9 rg /F2 9 Tf 48 545 Td (Whenever you build any new tool in the future \(e.g. JSON Formatter, Base64 Converter, Color Picker\), just copy) Tj ET
+BT 0.75 0.82 0.9 rg /F2 9 Tf 48 531.5 Td (this 1-page formula:) Tj ET
+0.02 0.71 0.83 rg 50 516 3 3 re f
+BT 0.95 0.98 1 rg /F1 8.5 Tf 60 514 Td (File 1: UserToolsService.js: export const myToolApi = async \(data\) => usePrivateApi.post\('/users/tools/my-tool',) Tj ET
+BT 0.75 0.82 0.9 rg /F2 8.5 Tf 60 501.5 Td (data\);) Tj ET
+0.02 0.71 0.83 rg 50 489 3 3 re f
+BT 0.95 0.98 1 rg /F1 8.5 Tf 60 487 Td (File 2: toolsRegistry.js: 'my-tool': { slug: 'my-tool', name: 'My Tool', categoryId: 2, toolId: 2, subToolId: 5,) Tj ET
+BT 0.75 0.82 0.9 rg /F2 8.5 Tf 60 474.5 Td (icon: Wrench, isAvailable: true }) Tj ET
+0.02 0.71 0.83 rg 50 462 3 3 re f
+BT 0.95 0.98 1 rg /F1 8.5 Tf 60 460 Td (File 3: MyTool.jsx: Create form with useState -> Call myToolApi on submit -> Display result card with copy) Tj ET
+BT 0.75 0.82 0.9 rg /F2 8.5 Tf 60 447.5 Td (button.) Tj ET
+0.02 0.71 0.83 rg 50 435 3 3 re f
+BT 0.95 0.98 1 rg /F1 8.5 Tf 60 433 Td (File 4: UserTools.jsx: Add: {toolSlug === 'my-tool' && <MyTool tool={currentTool} />}) Tj ET
+0.04 0.12 0.10 rg 48 362.5 516 56 re f
+0.10 0.75 0.50 RG 1 w 48 362.5 516 56 re S
+BT 0.20 0.90 0.60 rg /F1 9 Tf 62 402.5 Td (Summary Checklist) Tj ET
+BT 0.85 0.90 0.95 rg /F2 8.5 Tf 62 388.5 Td (1. Service \(API call\) -> 2. Registry \(Metadata\) -> 3. Component \(State & UI\) -> 4. Route \(UserTools.jsx\). That) Tj ET
+BT 0.85 0.90 0.95 rg /F2 8.5 Tf 62 375.5 Td (is the entire secret to building scalable, production-ready React applications!) Tj ET
+0.2 0.25 0.35 RG 0.5 w 48 42 m 564 42 l S
+BT 0.45 0.55 0.65 rg /F2 8 Tf 48 30 Td (DevToolBox Easy Learning Series) Tj ET
+BT 0.45 0.55 0.65 rg /F2 8 Tf 504 30 Td (Page 4 of 4) Tj ET
+endstream
+endobj
+11 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R >> >> /Contents 10 0 R >>
+endobj
+xref
+0 12
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000134 00000 n 
+0000000202 00000 n 
+0000004688 00000 n 
+0000004834 00000 n 
+0000009522 00000 n 
+0000009668 00000 n 
+0000013964 00000 n 
+0000014110 00000 n 
+0000017265 00000 n 
+trailer
+<< /Size 12 /Root 1 0 R >>
+startxref
+17413
+%%EOF

@@ -473,6 +473,9 @@ export const generatePdfGuide = (outputPath) => {
     const toolSummaryTable = [
         ["URL Shortener", "Productivity (id:2, sub:4)", "POST /api/users/tools/shorten-url", "JSON -> Short URL + Analytics"],
         ["QR Code Generator", "Productivity (id:2, sub:1)", "POST /api/users/tools/qr-code", "JSON -> Cloudinary URL"],
+        ["UUID Generator", "Productivity (id:2, sub:2)", "POST /api/users/tools/log-usage", "Client crypto -> Log usage"],
+        ["Word Counter", "Productivity (id:2, sub:3)", "POST /api/users/tools/log-usage", "Client metrics -> Log usage"],
+        ["Image Compressor", "Image Tools (id:1, sub:1)", "POST /api/users/tools/image-compressor", "FormData -> JPEG Blob"],
         ["PDF Compressor", "PDF Tools (id:3, sub:3)", "POST /api/users/tools/pdf-compressor", "FormData -> Binary Blob"],
         ["Image to PDF", "PDF Tools (id:3, sub:5)", "POST /api/users/tools/image-to-pdf", "FormData -> Binary Blob"],
         ["Word to PDF", "PDF Tools (id:3, sub:4)", "POST /api/users/tools/word-to-pdf", "FormData -> Binary Blob"],

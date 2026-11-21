@@ -65,7 +65,7 @@ endobj
 << /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R >> >> /Contents 4 0 R >>
 endobj
 6 0 obj
-<< /Length 6963 >>
+<< /Length 7665 >>
 stream
 BT 0.45 0.55 0.65 rg /F2 8 Tf 48 760 Td (DevToolBox * Full-Stack Architecture & Interview Guide) Tj ET
 0.2 0.25 0.35 RG 0.5 w 48 754 m 564 754 l S
@@ -107,50 +107,62 @@ BT 0.80 0.86 0.92 rg /F2 7.5 Tf 312 427 Td (POST /api/users/tools/qr-code) Tj ET
 BT 0.80 0.86 0.92 rg /F2 7.5 Tf 441 427 Td (JSON -> Cloudinary URL) Tj ET
 0.04 0.06 0.11 rg 48 407 516 16 re f
 0.15 0.20 0.30 RG 0.5 w 48 407 516 16 re S
-BT 0.80 0.86 0.92 rg /F2 7.5 Tf 54 411 Td (PDF Compressor) Tj ET
-BT 0.80 0.86 0.92 rg /F2 7.5 Tf 183 411 Td (PDF Tools \(id:3, sub:3\)) Tj ET
-BT 0.80 0.86 0.92 rg /F2 7.5 Tf 312 411 Td (POST /api/users/tools/pdf-compressor) Tj ET
-BT 0.80 0.86 0.92 rg /F2 7.5 Tf 441 411 Td (FormData -> Binary Blob) Tj ET
+BT 0.80 0.86 0.92 rg /F2 7.5 Tf 54 411 Td (UUID Generator) Tj ET
+BT 0.80 0.86 0.92 rg /F2 7.5 Tf 183 411 Td (Productivity \(id:2, sub:2\)) Tj ET
+BT 0.80 0.86 0.92 rg /F2 7.5 Tf 312 411 Td (POST /api/users/tools/log-usage) Tj ET
+BT 0.80 0.86 0.92 rg /F2 7.5 Tf 441 411 Td (Client crypto -> Log usage) Tj ET
 0.15 0.20 0.30 RG 0.5 w 48 391 516 16 re S
-BT 0.80 0.86 0.92 rg /F2 7.5 Tf 54 395 Td (Image to PDF) Tj ET
-BT 0.80 0.86 0.92 rg /F2 7.5 Tf 183 395 Td (PDF Tools \(id:3, sub:5\)) Tj ET
-BT 0.80 0.86 0.92 rg /F2 7.5 Tf 312 395 Td (POST /api/users/tools/image-to-pdf) Tj ET
-BT 0.80 0.86 0.92 rg /F2 7.5 Tf 441 395 Td (FormData -> Binary Blob) Tj ET
+BT 0.80 0.86 0.92 rg /F2 7.5 Tf 54 395 Td (Word Counter) Tj ET
+BT 0.80 0.86 0.92 rg /F2 7.5 Tf 183 395 Td (Productivity \(id:2, sub:3\)) Tj ET
+BT 0.80 0.86 0.92 rg /F2 7.5 Tf 312 395 Td (POST /api/users/tools/log-usage) Tj ET
+BT 0.80 0.86 0.92 rg /F2 7.5 Tf 441 395 Td (Client metrics -> Log usage) Tj ET
 0.04 0.06 0.11 rg 48 375 516 16 re f
 0.15 0.20 0.30 RG 0.5 w 48 375 516 16 re S
-BT 0.80 0.86 0.92 rg /F2 7.5 Tf 54 379 Td (Word to PDF) Tj ET
-BT 0.80 0.86 0.92 rg /F2 7.5 Tf 183 379 Td (PDF Tools \(id:3, sub:4\)) Tj ET
-BT 0.80 0.86 0.92 rg /F2 7.5 Tf 312 379 Td (POST /api/users/tools/word-to-pdf) Tj ET
-BT 0.80 0.86 0.92 rg /F2 7.5 Tf 441 379 Td (FormData -> Binary Blob) Tj ET
+BT 0.80 0.86 0.92 rg /F2 7.5 Tf 54 379 Td (Image Compressor) Tj ET
+BT 0.80 0.86 0.92 rg /F2 7.5 Tf 183 379 Td (Image Tools \(id:1, sub:1\)) Tj ET
+BT 0.80 0.86 0.92 rg /F2 7.5 Tf 312 379 Td (POST /api/users/tools/image-compressor) Tj ET
+BT 0.80 0.86 0.92 rg /F2 7.5 Tf 441 379 Td (FormData -> JPEG Blob) Tj ET
 0.15 0.20 0.30 RG 0.5 w 48 359 516 16 re S
-BT 0.80 0.86 0.92 rg /F2 7.5 Tf 54 363 Td (PDF Merger) Tj ET
-BT 0.80 0.86 0.92 rg /F2 7.5 Tf 183 363 Td (PDF Tools \(id:3, sub:1\)) Tj ET
-BT 0.80 0.86 0.92 rg /F2 7.5 Tf 312 363 Td (POST /api/users/tools) Tj ET
+BT 0.80 0.86 0.92 rg /F2 7.5 Tf 54 363 Td (PDF Compressor) Tj ET
+BT 0.80 0.86 0.92 rg /F2 7.5 Tf 183 363 Td (PDF Tools \(id:3, sub:3\)) Tj ET
+BT 0.80 0.86 0.92 rg /F2 7.5 Tf 312 363 Td (POST /api/users/tools/pdf-compressor) Tj ET
 BT 0.80 0.86 0.92 rg /F2 7.5 Tf 441 363 Td (FormData -> Binary Blob) Tj ET
-BT 0.25 0.82 0.92 rg /F1 11 Tf 48 341 Td (Deep Dive into Specialized Tool Capabilities) Tj ET
-0.02 0.71 0.83 rg 50 326 3 3 re f
-BT 0.95 0.98 1 rg /F1 8.5 Tf 60 324 Td (UrlShortenerTool.jsx: Accepts destination URLs with optional custom aliases. Connects to POST) Tj ET
-BT 0.75 0.82 0.9 rg /F2 8.5 Tf 60 311.5 Td (/api/users/tools/shorten-url to create short links and POST /api/users/tools/url to stream live analytics: total) Tj ET
-BT 0.75 0.82 0.9 rg /F2 8.5 Tf 60 299 Td (clicks, created dates, active vs expired statuses, and last click timestamps.) Tj ET
-0.02 0.71 0.83 rg 50 286.5 3 3 re f
-BT 0.95 0.98 1 rg /F1 8.5 Tf 60 284.5 Td (QrCodeTool.jsx: Accepts URL/text payloads with selectable dimensions \(200px to 500px\). Upon generation, it) Tj ET
-BT 0.75 0.82 0.9 rg /F2 8.5 Tf 60 272 Td (renders the Cloudinary image preview, allows direct PNG download, clipboard copying, and auto-saves the last 6) Tj ET
-BT 0.75 0.82 0.9 rg /F2 8.5 Tf 60 259.5 Td (generations to localStorage.) Tj ET
-0.02 0.71 0.83 rg 50 247 3 3 re f
-BT 0.95 0.98 1 rg /F1 8.5 Tf 60 245 Td (PdfCompressorTool.jsx: Accepts PDF files up to 25MB via drag-and-drop. Provides 3 GhostScript compression) Tj ET
-BT 0.75 0.82 0.9 rg /F2 8.5 Tf 60 232.5 Td (profiles \(LOW: Print, MEDIUM: Balanced, HIGH: Screen/Email\). Downloads the compressed file and displays byte) Tj ET
-BT 0.75 0.82 0.9 rg /F2 8.5 Tf 60 220 Td (savings.) Tj ET
-0.02 0.71 0.83 rg 50 207.5 3 3 re f
-BT 0.95 0.98 1 rg /F1 8.5 Tf 60 205.5 Td (ImageToPdfTool.jsx: Accepts up to 20 images \(JPG, PNG, GIF, BMP\). Displays an interactive thumbnail gallery with) Tj ET
-BT 0.75 0.82 0.9 rg /F2 8.5 Tf 60 193 Td (individual delete buttons and supports FIT_IMAGE or standard A4 page layout modes.) Tj ET
-0.02 0.71 0.83 rg 50 180.5 3 3 re f
-BT 0.95 0.98 1 rg /F1 8.5 Tf 60 178.5 Td (WordToPdfTool.jsx: Converts Microsoft Word \(.docx\) files into clean, printable PDFs with input format validation) Tj ET
-BT 0.75 0.82 0.9 rg /F2 8.5 Tf 60 166 Td (and error handling.) Tj ET
-0.02 0.71 0.83 rg 50 153.5 3 3 re f
-BT 0.95 0.98 1 rg /F1 8.5 Tf 60 151.5 Td (PdfMergeTool.jsx: Allows users to upload 2 to 20 PDFs and reorder their merge sequence with Move Up/Down controls) Tj ET
-BT 0.75 0.82 0.9 rg /F2 8.5 Tf 60 139 Td (before submitting to the backend.) Tj ET
-0.02 0.71 0.83 rg 48 114.5 4 16 re f
-BT 0.95 0.98 1 rg /F1 14 Tf 60 116.5 Td (4. Axios Network Layer: Dual Payload & Binary Streams) Tj ET
+0.04 0.06 0.11 rg 48 343 516 16 re f
+0.15 0.20 0.30 RG 0.5 w 48 343 516 16 re S
+BT 0.80 0.86 0.92 rg /F2 7.5 Tf 54 347 Td (Image to PDF) Tj ET
+BT 0.80 0.86 0.92 rg /F2 7.5 Tf 183 347 Td (PDF Tools \(id:3, sub:5\)) Tj ET
+BT 0.80 0.86 0.92 rg /F2 7.5 Tf 312 347 Td (POST /api/users/tools/image-to-pdf) Tj ET
+BT 0.80 0.86 0.92 rg /F2 7.5 Tf 441 347 Td (FormData -> Binary Blob) Tj ET
+0.15 0.20 0.30 RG 0.5 w 48 327 516 16 re S
+BT 0.80 0.86 0.92 rg /F2 7.5 Tf 54 331 Td (Word to PDF) Tj ET
+BT 0.80 0.86 0.92 rg /F2 7.5 Tf 183 331 Td (PDF Tools \(id:3, sub:4\)) Tj ET
+BT 0.80 0.86 0.92 rg /F2 7.5 Tf 312 331 Td (POST /api/users/tools/word-to-pdf) Tj ET
+BT 0.80 0.86 0.92 rg /F2 7.5 Tf 441 331 Td (FormData -> Binary Blob) Tj ET
+0.04 0.06 0.11 rg 48 311 516 16 re f
+0.15 0.20 0.30 RG 0.5 w 48 311 516 16 re S
+BT 0.80 0.86 0.92 rg /F2 7.5 Tf 54 315 Td (PDF Merger) Tj ET
+BT 0.80 0.86 0.92 rg /F2 7.5 Tf 183 315 Td (PDF Tools \(id:3, sub:1\)) Tj ET
+BT 0.80 0.86 0.92 rg /F2 7.5 Tf 312 315 Td (POST /api/users/tools) Tj ET
+BT 0.80 0.86 0.92 rg /F2 7.5 Tf 441 315 Td (FormData -> Binary Blob) Tj ET
+BT 0.25 0.82 0.92 rg /F1 11 Tf 48 293 Td (Deep Dive into Specialized Tool Capabilities) Tj ET
+0.02 0.71 0.83 rg 50 278 3 3 re f
+BT 0.95 0.98 1 rg /F1 8.5 Tf 60 276 Td (UrlShortenerTool.jsx: Accepts destination URLs with optional custom aliases. Connects to POST) Tj ET
+BT 0.75 0.82 0.9 rg /F2 8.5 Tf 60 263.5 Td (/api/users/tools/shorten-url to create short links and POST /api/users/tools/url to stream live analytics: total) Tj ET
+BT 0.75 0.82 0.9 rg /F2 8.5 Tf 60 251 Td (clicks, created dates, active vs expired statuses, and last click timestamps.) Tj ET
+0.02 0.71 0.83 rg 50 238.5 3 3 re f
+BT 0.95 0.98 1 rg /F1 8.5 Tf 60 236.5 Td (QrCodeTool.jsx: Accepts URL/text payloads with selectable dimensions \(200px to 500px\). Upon generation, it) Tj ET
+BT 0.75 0.82 0.9 rg /F2 8.5 Tf 60 224 Td (renders the Cloudinary image preview, allows direct PNG download, clipboard copying, and auto-saves the last 6) Tj ET
+BT 0.75 0.82 0.9 rg /F2 8.5 Tf 60 211.5 Td (generations to localStorage.) Tj ET
+0.02 0.71 0.83 rg 50 199 3 3 re f
+BT 0.95 0.98 1 rg /F1 8.5 Tf 60 197 Td (PdfCompressorTool.jsx: Accepts PDF files up to 25MB via drag-and-drop. Provides 3 GhostScript compression) Tj ET
+BT 0.75 0.82 0.9 rg /F2 8.5 Tf 60 184.5 Td (profiles \(LOW: Print, MEDIUM: Balanced, HIGH: Screen/Email\). Downloads the compressed file and displays byte) Tj ET
+BT 0.75 0.82 0.9 rg /F2 8.5 Tf 60 172 Td (savings.) Tj ET
+0.02 0.71 0.83 rg 50 159.5 3 3 re f
+BT 0.95 0.98 1 rg /F1 8.5 Tf 60 157.5 Td (ImageToPdfTool.jsx: Accepts up to 20 images \(JPG, PNG, GIF, BMP\). Displays an interactive thumbnail gallery with) Tj ET
+BT 0.75 0.82 0.9 rg /F2 8.5 Tf 60 145 Td (individual delete buttons and supports FIT_IMAGE or standard A4 page layout modes.) Tj ET
+0.02 0.71 0.83 rg 50 132.5 3 3 re f
+BT 0.95 0.98 1 rg /F1 8.5 Tf 60 130.5 Td (WordToPdfTool.jsx: Converts Microsoft Word \(.docx\) files into clean, printable PDFs with input format validation) Tj ET
+BT 0.75 0.82 0.9 rg /F2 8.5 Tf 60 118 Td (and error handling.) Tj ET
 0.2 0.25 0.35 RG 0.5 w 48 42 m 564 42 l S
 BT 0.45 0.55 0.65 rg /F2 8 Tf 48 30 Td (DevToolBox Engineering Playbook) Tj ET
 BT 0.45 0.55 0.65 rg /F2 8 Tf 504 30 Td (Page 2 of 5) Tj ET
@@ -160,65 +172,63 @@ endobj
 << /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R >> >> /Contents 6 0 R >>
 endobj
 8 0 obj
-<< /Length 5832 >>
+<< /Length 5640 >>
 stream
 BT 0.45 0.55 0.65 rg /F2 8 Tf 48 760 Td (DevToolBox * Full-Stack Architecture & Interview Guide) Tj ET
 0.2 0.25 0.35 RG 0.5 w 48 754 m 564 754 l S
-BT 0.75 0.82 0.9 rg /F2 9 Tf 48 720 Td (One of the critical technical challenges in full-stack engineering is handling dual payload types: standard) Tj ET
-BT 0.75 0.82 0.9 rg /F2 9 Tf 48 706.5 Td (JSON responses alongside binary file streams \(PDF blobs\) without breaking existing interceptors.) Tj ET
-0.04 0.12 0.10 rg 48 607 516 82 re f
-0.10 0.75 0.50 RG 1 w 48 607 516 82 re S
-BT 0.20 0.90 0.60 rg /F1 9 Tf 62 673 Td (The Binary Blob Interceptor Problem & Solution) Tj ET
-BT 0.85 0.90 0.95 rg /F2 8.5 Tf 62 659 Td (Default Axios response interceptors expect response.data to be a JSON object with { code, message, data }.) Tj ET
-BT 0.85 0.90 0.95 rg /F2 8.5 Tf 62 646 Td (When an endpoint returns a PDF byte array with responseType: 'blob', checking response.data.code returns) Tj ET
-BT 0.85 0.90 0.95 rg /F2 8.5 Tf 62 633 Td (undefined and strips the file bytes! We updated axiosInterceptors.js to detect Blob instances and pass them) Tj ET
-BT 0.85 0.90 0.95 rg /F2 8.5 Tf 62 620 Td (directly to the caller, while checking if an error JSON was encapsulated inside the blob.) Tj ET
-0.03 0.05 0.09 rg 48 396 516 201 re f
-0.18 0.22 0.32 RG 0.75 w 48 396 516 201 re S
-BT 0.30 0.85 0.95 rg /F3 7.5 Tf 60 586 Td (// Support Binary Blobs & Multipart in axiosInterceptors.js) Tj ET
-BT 0.30 0.85 0.95 rg /F3 7.5 Tf 60 575 Td (const handleResponse = async \(response\) => {) Tj ET
-BT 0.30 0.85 0.95 rg /F3 7.5 Tf 60 564 Td (    if \(response.data instanceof Blob || response.config?.responseType === 'blob'\) {) Tj ET
-BT 0.30 0.85 0.95 rg /F3 7.5 Tf 60 553 Td (        if \(response.data?.type === 'application/json'\) {) Tj ET
-BT 0.30 0.85 0.95 rg /F3 7.5 Tf 60 542 Td (            const text = await response.data.text\(\);) Tj ET
-BT 0.30 0.85 0.95 rg /F3 7.5 Tf 60 531 Td (            const parsed = JSON.parse\(text\);) Tj ET
-BT 0.30 0.85 0.95 rg /F3 7.5 Tf 60 520 Td (            if \(parsed.code === 8\) return Promise.reject\(new Error\(parsed.message\)\);) Tj ET
-BT 0.30 0.85 0.95 rg /F3 7.5 Tf 60 509 Td (        }) Tj ET
-BT 0.30 0.85 0.95 rg /F3 7.5 Tf 60 498 Td (        return response.data; // Pass binary Blob directly to caller!) Tj ET
-BT 0.30 0.85 0.95 rg /F3 7.5 Tf 60 487 Td (    }) Tj ET
-BT 0.30 0.85 0.95 rg /F3 7.5 Tf 60 476 Td (    return { code: response.data?.code, data: response.data?.data?.details };) Tj ET
-BT 0.30 0.85 0.95 rg /F3 7.5 Tf 60 465 Td (};) Tj ET
-BT 0.30 0.85 0.95 rg /F3 7.5 Tf 60 454 Td (// Automatic Content-Type stripping for FormData) Tj ET
-BT 0.30 0.85 0.95 rg /F3 7.5 Tf 60 443 Td (usePrivateApi.interceptors.request.use\(\(config\) => {) Tj ET
-BT 0.30 0.85 0.95 rg /F3 7.5 Tf 60 432 Td (    if \(config.data instanceof FormData\) delete config.headers['Content-Type'];) Tj ET
-BT 0.30 0.85 0.95 rg /F3 7.5 Tf 60 421 Td (    return config;) Tj ET
-BT 0.30 0.85 0.95 rg /F3 7.5 Tf 60 410 Td (}\);) Tj ET
-0.02 0.71 0.83 rg 48 376 4 16 re f
-BT 0.95 0.98 1 rg /F1 14 Tf 60 378 Td (5. The Universal 5-Layer Template for Any Web App) Tj ET
-BT 0.75 0.82 0.9 rg /F2 9 Tf 48 356 Td (To build any new web app or feature quickly and cleanly, follow this standardized 5-layer mental model. Each) Tj ET
-BT 0.75 0.82 0.9 rg /F2 9 Tf 48 342.5 Td (layer has strict responsibilities, ensuring modularity, easy maintenance, and rapid scalability.) Tj ET
-0.02 0.71 0.83 rg 50 327 3 3 re f
-BT 0.95 0.98 1 rg /F1 8.5 Tf 60 325 Td (Layer 1: Routing Layer \(src/routes/\): Defines URL paths, protected layouts, and dynamic parameters \(e.g.,) Tj ET
-BT 0.75 0.82 0.9 rg /F2 8.5 Tf 60 312.5 Td (/user/tools/:toolSlug\). Keeps route logic decoupled from UI.) Tj ET
-0.02 0.71 0.83 rg 50 300 3 3 re f
-BT 0.95 0.98 1 rg /F1 8.5 Tf 60 298 Td (Layer 2: Layout Layer \(src/layout/\): Provides shells, navigation sidebars, breadcrumbs, and responsive viewports) Tj ET
-BT 0.75 0.82 0.9 rg /F2 8.5 Tf 60 285.5 Td (\(e.g., UserAppLayout, UserNavbar\).) Tj ET
-0.02 0.71 0.83 rg 50 273 3 3 re f
-BT 0.95 0.98 1 rg /F1 8.5 Tf 60 271 Td (Layer 3: Page Controllers \(src/pages/\): Coordinates data fetching on mount, manages global page state \(e.g.,) Tj ET
-BT 0.75 0.82 0.9 rg /F2 8.5 Tf 60 258.5 Td (categories, active modal\), and handles fallback logic.) Tj ET
-0.02 0.71 0.83 rg 50 246 3 3 re f
-BT 0.95 0.98 1 rg /F1 8.5 Tf 60 244 Td (Layer 4: Component / Registry Layer \(src/components/\): Contains presentation cards, modals, and isolated tool) Tj ET
-BT 0.75 0.82 0.9 rg /F2 8.5 Tf 60 231.5 Td (implementations. Centralized registries \(toolsRegistry.js\) decouple UI from backend schemas.) Tj ET
-0.02 0.71 0.83 rg 50 219 3 3 re f
-BT 0.95 0.98 1 rg /F1 8.5 Tf 60 217 Td (Layer 5: Service & Network Layer \(src/services/ & src/api/\): Centralizes all HTTP calls, FormData assembly, and) Tj ET
-BT 0.75 0.82 0.9 rg /F2 8.5 Tf 60 204.5 Td (response parsing. Components never invoke axios directly.) Tj ET
-BT 0.25 0.82 0.92 rg /F1 11 Tf 48 184 Td (How to Add Any New Tool in 3 Simple Steps) Tj ET
-0.02 0.71 0.83 rg 50 169 3 3 re f
-BT 0.95 0.98 1 rg /F1 8.5 Tf 60 167 Td (Step 1 - Service: Add export const myToolApi = async \(data\) => usePrivateApi.post\('/users/tools/new', data\) in) Tj ET
-BT 0.75 0.82 0.9 rg /F2 8.5 Tf 60 154.5 Td (UserToolsService.js.) Tj ET
-0.02 0.71 0.83 rg 50 142 3 3 re f
-BT 0.95 0.98 1 rg /F1 8.5 Tf 60 140 Td (Step 2 - Registry: Add entry with slug, name, icon, and endpoint in toolsRegistry.js.) Tj ET
-0.02 0.71 0.83 rg 50 127.5 3 3 re f
-BT 0.95 0.98 1 rg /F1 8.5 Tf 60 125.5 Td (Step 3 - Component: Create MyTool.jsx in implementations/ and render in UserTools.jsx.) Tj ET
+0.02 0.71 0.83 rg 50 722 3 3 re f
+BT 0.95 0.98 1 rg /F1 8.5 Tf 60 720 Td (PdfMergeTool.jsx: Allows users to upload 2 to 20 PDFs and reorder their merge sequence with Move Up/Down controls) Tj ET
+BT 0.75 0.82 0.9 rg /F2 8.5 Tf 60 707.5 Td (before submitting to the backend.) Tj ET
+0.02 0.71 0.83 rg 48 683 4 16 re f
+BT 0.95 0.98 1 rg /F1 14 Tf 60 685 Td (4. Axios Network Layer: Dual Payload & Binary Streams) Tj ET
+BT 0.75 0.82 0.9 rg /F2 9 Tf 48 663 Td (One of the critical technical challenges in full-stack engineering is handling dual payload types: standard) Tj ET
+BT 0.75 0.82 0.9 rg /F2 9 Tf 48 649.5 Td (JSON responses alongside binary file streams \(PDF blobs\) without breaking existing interceptors.) Tj ET
+0.04 0.12 0.10 rg 48 550 516 82 re f
+0.10 0.75 0.50 RG 1 w 48 550 516 82 re S
+BT 0.20 0.90 0.60 rg /F1 9 Tf 62 616 Td (The Binary Blob Interceptor Problem & Solution) Tj ET
+BT 0.85 0.90 0.95 rg /F2 8.5 Tf 62 602 Td (Default Axios response interceptors expect response.data to be a JSON object with { code, message, data }.) Tj ET
+BT 0.85 0.90 0.95 rg /F2 8.5 Tf 62 589 Td (When an endpoint returns a PDF byte array with responseType: 'blob', checking response.data.code returns) Tj ET
+BT 0.85 0.90 0.95 rg /F2 8.5 Tf 62 576 Td (undefined and strips the file bytes! We updated axiosInterceptors.js to detect Blob instances and pass them) Tj ET
+BT 0.85 0.90 0.95 rg /F2 8.5 Tf 62 563 Td (directly to the caller, while checking if an error JSON was encapsulated inside the blob.) Tj ET
+0.03 0.05 0.09 rg 48 339 516 201 re f
+0.18 0.22 0.32 RG 0.75 w 48 339 516 201 re S
+BT 0.30 0.85 0.95 rg /F3 7.5 Tf 60 529 Td (// Support Binary Blobs & Multipart in axiosInterceptors.js) Tj ET
+BT 0.30 0.85 0.95 rg /F3 7.5 Tf 60 518 Td (const handleResponse = async \(response\) => {) Tj ET
+BT 0.30 0.85 0.95 rg /F3 7.5 Tf 60 507 Td (    if \(response.data instanceof Blob || response.config?.responseType === 'blob'\) {) Tj ET
+BT 0.30 0.85 0.95 rg /F3 7.5 Tf 60 496 Td (        if \(response.data?.type === 'application/json'\) {) Tj ET
+BT 0.30 0.85 0.95 rg /F3 7.5 Tf 60 485 Td (            const text = await response.data.text\(\);) Tj ET
+BT 0.30 0.85 0.95 rg /F3 7.5 Tf 60 474 Td (            const parsed = JSON.parse\(text\);) Tj ET
+BT 0.30 0.85 0.95 rg /F3 7.5 Tf 60 463 Td (            if \(parsed.code === 8\) return Promise.reject\(new Error\(parsed.message\)\);) Tj ET
+BT 0.30 0.85 0.95 rg /F3 7.5 Tf 60 452 Td (        }) Tj ET
+BT 0.30 0.85 0.95 rg /F3 7.5 Tf 60 441 Td (        return response.data; // Pass binary Blob directly to caller!) Tj ET
+BT 0.30 0.85 0.95 rg /F3 7.5 Tf 60 430 Td (    }) Tj ET
+BT 0.30 0.85 0.95 rg /F3 7.5 Tf 60 419 Td (    return { code: response.data?.code, data: response.data?.data?.details };) Tj ET
+BT 0.30 0.85 0.95 rg /F3 7.5 Tf 60 408 Td (};) Tj ET
+BT 0.30 0.85 0.95 rg /F3 7.5 Tf 60 397 Td (// Automatic Content-Type stripping for FormData) Tj ET
+BT 0.30 0.85 0.95 rg /F3 7.5 Tf 60 386 Td (usePrivateApi.interceptors.request.use\(\(config\) => {) Tj ET
+BT 0.30 0.85 0.95 rg /F3 7.5 Tf 60 375 Td (    if \(config.data instanceof FormData\) delete config.headers['Content-Type'];) Tj ET
+BT 0.30 0.85 0.95 rg /F3 7.5 Tf 60 364 Td (    return config;) Tj ET
+BT 0.30 0.85 0.95 rg /F3 7.5 Tf 60 353 Td (}\);) Tj ET
+0.02 0.71 0.83 rg 48 319 4 16 re f
+BT 0.95 0.98 1 rg /F1 14 Tf 60 321 Td (5. The Universal 5-Layer Template for Any Web App) Tj ET
+BT 0.75 0.82 0.9 rg /F2 9 Tf 48 299 Td (To build any new web app or feature quickly and cleanly, follow this standardized 5-layer mental model. Each) Tj ET
+BT 0.75 0.82 0.9 rg /F2 9 Tf 48 285.5 Td (layer has strict responsibilities, ensuring modularity, easy maintenance, and rapid scalability.) Tj ET
+0.02 0.71 0.83 rg 50 270 3 3 re f
+BT 0.95 0.98 1 rg /F1 8.5 Tf 60 268 Td (Layer 1: Routing Layer \(src/routes/\): Defines URL paths, protected layouts, and dynamic parameters \(e.g.,) Tj ET
+BT 0.75 0.82 0.9 rg /F2 8.5 Tf 60 255.5 Td (/user/tools/:toolSlug\). Keeps route logic decoupled from UI.) Tj ET
+0.02 0.71 0.83 rg 50 243 3 3 re f
+BT 0.95 0.98 1 rg /F1 8.5 Tf 60 241 Td (Layer 2: Layout Layer \(src/layout/\): Provides shells, navigation sidebars, breadcrumbs, and responsive viewports) Tj ET
+BT 0.75 0.82 0.9 rg /F2 8.5 Tf 60 228.5 Td (\(e.g., UserAppLayout, UserNavbar\).) Tj ET
+0.02 0.71 0.83 rg 50 216 3 3 re f
+BT 0.95 0.98 1 rg /F1 8.5 Tf 60 214 Td (Layer 3: Page Controllers \(src/pages/\): Coordinates data fetching on mount, manages global page state \(e.g.,) Tj ET
+BT 0.75 0.82 0.9 rg /F2 8.5 Tf 60 201.5 Td (categories, active modal\), and handles fallback logic.) Tj ET
+0.02 0.71 0.83 rg 50 189 3 3 re f
+BT 0.95 0.98 1 rg /F1 8.5 Tf 60 187 Td (Layer 4: Component / Registry Layer \(src/components/\): Contains presentation cards, modals, and isolated tool) Tj ET
+BT 0.75 0.82 0.9 rg /F2 8.5 Tf 60 174.5 Td (implementations. Centralized registries \(toolsRegistry.js\) decouple UI from backend schemas.) Tj ET
+0.02 0.71 0.83 rg 50 162 3 3 re f
+BT 0.95 0.98 1 rg /F1 8.5 Tf 60 160 Td (Layer 5: Service & Network Layer \(src/services/ & src/api/\): Centralizes all HTTP calls, FormData assembly, and) Tj ET
+BT 0.75 0.82 0.9 rg /F2 8.5 Tf 60 147.5 Td (response parsing. Components never invoke axios directly.) Tj ET
+BT 0.25 0.82 0.92 rg /F1 11 Tf 48 127 Td (How to Add Any New Tool in 3 Simple Steps) Tj ET
 0.2 0.25 0.35 RG 0.5 w 48 42 m 564 42 l S
 BT 0.45 0.55 0.65 rg /F2 8 Tf 48 30 Td (DevToolBox Engineering Playbook) Tj ET
 BT 0.45 0.55 0.65 rg /F2 8 Tf 504 30 Td (Page 3 of 5) Tj ET
@@ -228,79 +238,86 @@ endobj
 << /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R >> >> /Contents 8 0 R >>
 endobj
 10 0 obj
-<< /Length 6635 >>
+<< /Length 7242 >>
 stream
 BT 0.45 0.55 0.65 rg /F2 8 Tf 48 760 Td (DevToolBox * Full-Stack Architecture & Interview Guide) Tj ET
 0.2 0.25 0.35 RG 0.5 w 48 754 m 564 754 l S
-0.02 0.71 0.83 rg 48 710 4 16 re f
-BT 0.95 0.98 1 rg /F1 14 Tf 60 712 Td (6. Directory Map: What is Where) Tj ET
-BT 0.75 0.82 0.9 rg /F2 9 Tf 48 690 Td (Use this reference map whenever you want to locate an existing feature or decide where to place new files:) Tj ET
-0.08 0.12 0.20 rg 48 656.5 516 16 re f
-0.25 0.35 0.50 RG 0.5 w 48 656.5 516 16 re S
-BT 0.95 0.98 1 rg /F1 8 Tf 54 660.5 Td (File / Directory Path) Tj ET
-BT 0.95 0.98 1 rg /F1 8 Tf 312 660.5 Td (Architectural Role & Description) Tj ET
-0.04 0.06 0.11 rg 48 640.5 516 16 re f
-0.15 0.20 0.30 RG 0.5 w 48 640.5 516 16 re S
-BT 0.80 0.86 0.92 rg /F2 7.5 Tf 54 644.5 Td (src/api/axiosInstance.js) Tj ET
-BT 0.80 0.86 0.92 rg /F2 7.5 Tf 312 644.5 Td (Axios client definitions \(usePublicApi, usePrivateApi\) with baseURL.) Tj ET
-0.15 0.20 0.30 RG 0.5 w 48 624.5 516 16 re S
-BT 0.80 0.86 0.92 rg /F2 7.5 Tf 54 628.5 Td (src/api/axiosInterceptors.js) Tj ET
-BT 0.80 0.86 0.92 rg /F2 7.5 Tf 312 628.5 Td (JWT token refresh, 401 recovery, and binary Blob/FormData interceptors.) Tj ET
-0.04 0.06 0.11 rg 48 608.5 516 16 re f
-0.15 0.20 0.30 RG 0.5 w 48 608.5 516 16 re S
-BT 0.80 0.86 0.92 rg /F2 7.5 Tf 54 612.5 Td (src/services/user/UserToolsService.js) Tj ET
-BT 0.80 0.86 0.92 rg /F2 7.5 Tf 312 612.5 Td (All user tool suite API calls \(tools-suite, sub-tools, qr, pdf tools\).) Tj ET
-0.15 0.20 0.30 RG 0.5 w 48 592.5 516 16 re S
-BT 0.80 0.86 0.92 rg /F2 7.5 Tf 54 596.5 Td (src/pages/user/UserTools.jsx) Tj ET
-BT 0.80 0.86 0.92 rg /F2 7.5 Tf 312 596.5 Td (Main suite controller: renders Category Folders, Modal, and Tool pages.) Tj ET
-0.04 0.06 0.11 rg 48 576.5 516 16 re f
-0.15 0.20 0.30 RG 0.5 w 48 576.5 516 16 re S
-BT 0.80 0.86 0.92 rg /F2 7.5 Tf 54 580.5 Td (src/components/user/tools/toolsRegistry.js) Tj ET
-BT 0.80 0.86 0.92 rg /F2 7.5 Tf 312 580.5 Td (Catalog metadata: categories, sub-tool definitions, icons, endpoints.) Tj ET
-0.15 0.20 0.30 RG 0.5 w 48 560.5 516 16 re S
-BT 0.80 0.86 0.92 rg /F2 7.5 Tf 54 564.5 Td (src/components/user/tools/ToolCategoryCard.jsx) Tj ET
-BT 0.80 0.86 0.92 rg /F2 7.5 Tf 312 564.5 Td (Folder-styled card with glassmorphism and cyan glow on hover.) Tj ET
-0.04 0.06 0.11 rg 48 544.5 516 16 re f
-0.15 0.20 0.30 RG 0.5 w 48 544.5 516 16 re S
-BT 0.80 0.86 0.92 rg /F2 7.5 Tf 54 548.5 Td (src/components/user/tools/SubToolsModal.jsx) Tj ET
-BT 0.80 0.86 0.92 rg /F2 7.5 Tf 312 548.5 Td (Modal displaying sub-tools with live vs coming-soon status.) Tj ET
-0.15 0.20 0.30 RG 0.5 w 48 528.5 516 16 re S
-BT 0.80 0.86 0.92 rg /F2 7.5 Tf 54 532.5 Td (src/components/user/tools/ToolPageWrapper.jsx) Tj ET
-BT 0.80 0.86 0.92 rg /F2 7.5 Tf 312 532.5 Td (Unified workspace header with breadcrumbs and Back button.) Tj ET
-0.04 0.06 0.11 rg 48 512.5 516 16 re f
-0.15 0.20 0.30 RG 0.5 w 48 512.5 516 16 re S
-BT 0.80 0.86 0.92 rg /F2 7.5 Tf 54 516.5 Td (src/components/user/tools/fileDownloadHelper.js) Tj ET
-BT 0.80 0.86 0.92 rg /F2 7.5 Tf 312 516.5 Td (Utilities for triggering browser file downloads and formatting bytes.) Tj ET
-0.15 0.20 0.30 RG 0.5 w 48 496.5 516 16 re S
-BT 0.80 0.86 0.92 rg /F2 7.5 Tf 54 500.5 Td (src/components/user/tools/implementations/) Tj ET
-BT 0.80 0.86 0.92 rg /F2 7.5 Tf 312 500.5 Td (Houses QrCodeTool, PdfCompressorTool, ImageToPdfTool, etc.) Tj ET
-0.04 0.06 0.11 rg 48 480.5 516 16 re f
-0.15 0.20 0.30 RG 0.5 w 48 480.5 516 16 re S
-BT 0.80 0.86 0.92 rg /F2 7.5 Tf 54 484.5 Td (src/routes/DevToolBoxRoutes.jsx) Tj ET
-BT 0.80 0.86 0.92 rg /F2 7.5 Tf 312 484.5 Td (Application routing table, loaders, and protected route definitions.) Tj ET
-0.02 0.71 0.83 rg 48 458.5 4 16 re f
-BT 0.95 0.98 1 rg /F1 14 Tf 60 460.5 Td (7. Technical Interview Masterclass) Tj ET
-BT 0.75 0.82 0.9 rg /F2 9 Tf 48 438.5 Td (When interviewers ask you about DevToolBox or how you built the Tool Suite, use these structured answers to) Tj ET
-BT 0.75 0.82 0.9 rg /F2 9 Tf 48 425 Td (demonstrate senior-level engineering depth.) Tj ET
-0.08 0.07 0.16 rg 48 299.5 516 108 re f
-0.55 0.35 0.95 RG 1 w 48 299.5 516 108 re S
-BT 0.75 0.60 1 rg /F1 9 Tf 62 391.5 Td (Question 1: 'Can you walk me through the architecture of the Tool Suite?') Tj ET
-BT 0.85 0.90 0.95 rg /F2 8.5 Tf 62 377.5 Td (Answer: 'I architected a modular, registry-driven tool suite. On route mount \(/user/tools\), the client calls) Tj ET
-BT 0.85 0.90 0.95 rg /F2 8.5 Tf 62 364.5 Td (GET /api/users/tools-suite. Because backend queries often return denormalized duplicate rows, I implemented a) Tj ET
-BT 0.85 0.90 0.95 rg /F2 8.5 Tf 62 351.5 Td (client-side Map aggregation to deduplicate categories by toolId and compute real-time tool counts. Clicking a) Tj ET
-BT 0.85 0.90 0.95 rg /F2 8.5 Tf 62 338.5 Td (category folder opens a lazy-loaded modal that queries sub-tools dynamically. Clicking any tool navigates to) Tj ET
-BT 0.85 0.90 0.95 rg /F2 8.5 Tf 62 325.5 Td (/user/tools/:toolSlug, which mounts the dedicated tool controller wrapped in a unified layout shell with) Tj ET
-BT 0.85 0.90 0.95 rg /F2 8.5 Tf 62 312.5 Td (breadcrumbs. This separation ensures zero coupling between individual tool implementations.') Tj ET
-0.08 0.07 0.16 rg 48 168.5 516 121 re f
-0.55 0.35 0.95 RG 1 w 48 168.5 516 121 re S
-BT 0.75 0.60 1 rg /F1 9 Tf 62 273.5 Td (Question 2: 'How did you handle file uploads and PDF downloads with Axios?') Tj ET
-BT 0.85 0.90 0.95 rg /F2 8.5 Tf 62 259.5 Td (Answer: 'For file uploads like PDF compression and multi-image conversion, I assembled multipart/form-data) Tj ET
-BT 0.85 0.90 0.95 rg /F2 8.5 Tf 62 246.5 Td (payloads and created a request interceptor to strip default application/json headers, allowing the browser to) Tj ET
-BT 0.85 0.90 0.95 rg /F2 8.5 Tf 62 233.5 Td (set the correct boundary. For downloads, Spring Boot streams ResponseEntity<byte[]> as application/pdf.) Tj ET
-BT 0.85 0.90 0.95 rg /F2 8.5 Tf 62 220.5 Td (Standard Axios interceptors strip non-JSON bodies, so I enhanced our response interceptor to detect Blob) Tj ET
-BT 0.85 0.90 0.95 rg /F2 8.5 Tf 62 207.5 Td (instances, verify whether an error JSON was encapsulated inside the blob, and pipe the binary stream directly) Tj ET
-BT 0.85 0.90 0.95 rg /F2 8.5 Tf 62 194.5 Td (to an in-memory Object URL \(window.URL.createObjectURL\) to trigger instantaneous client-side file downloads) Tj ET
-BT 0.85 0.90 0.95 rg /F2 8.5 Tf 62 181.5 Td (with zero data loss.') Tj ET
+0.02 0.71 0.83 rg 50 722 3 3 re f
+BT 0.95 0.98 1 rg /F1 8.5 Tf 60 720 Td (Step 1 - Service: Add export const myToolApi = async \(data\) => usePrivateApi.post\('/users/tools/new', data\) in) Tj ET
+BT 0.75 0.82 0.9 rg /F2 8.5 Tf 60 707.5 Td (UserToolsService.js.) Tj ET
+0.02 0.71 0.83 rg 50 695 3 3 re f
+BT 0.95 0.98 1 rg /F1 8.5 Tf 60 693 Td (Step 2 - Registry: Add entry with slug, name, icon, and endpoint in toolsRegistry.js.) Tj ET
+0.02 0.71 0.83 rg 50 680.5 3 3 re f
+BT 0.95 0.98 1 rg /F1 8.5 Tf 60 678.5 Td (Step 3 - Component: Create MyTool.jsx in implementations/ and render in UserTools.jsx.) Tj ET
+0.02 0.71 0.83 rg 48 654 4 16 re f
+BT 0.95 0.98 1 rg /F1 14 Tf 60 656 Td (6. Directory Map: What is Where) Tj ET
+BT 0.75 0.82 0.9 rg /F2 9 Tf 48 634 Td (Use this reference map whenever you want to locate an existing feature or decide where to place new files:) Tj ET
+0.08 0.12 0.20 rg 48 600.5 516 16 re f
+0.25 0.35 0.50 RG 0.5 w 48 600.5 516 16 re S
+BT 0.95 0.98 1 rg /F1 8 Tf 54 604.5 Td (File / Directory Path) Tj ET
+BT 0.95 0.98 1 rg /F1 8 Tf 312 604.5 Td (Architectural Role & Description) Tj ET
+0.04 0.06 0.11 rg 48 584.5 516 16 re f
+0.15 0.20 0.30 RG 0.5 w 48 584.5 516 16 re S
+BT 0.80 0.86 0.92 rg /F2 7.5 Tf 54 588.5 Td (src/api/axiosInstance.js) Tj ET
+BT 0.80 0.86 0.92 rg /F2 7.5 Tf 312 588.5 Td (Axios client definitions \(usePublicApi, usePrivateApi\) with baseURL.) Tj ET
+0.15 0.20 0.30 RG 0.5 w 48 568.5 516 16 re S
+BT 0.80 0.86 0.92 rg /F2 7.5 Tf 54 572.5 Td (src/api/axiosInterceptors.js) Tj ET
+BT 0.80 0.86 0.92 rg /F2 7.5 Tf 312 572.5 Td (JWT token refresh, 401 recovery, and binary Blob/FormData interceptors.) Tj ET
+0.04 0.06 0.11 rg 48 552.5 516 16 re f
+0.15 0.20 0.30 RG 0.5 w 48 552.5 516 16 re S
+BT 0.80 0.86 0.92 rg /F2 7.5 Tf 54 556.5 Td (src/services/user/UserToolsService.js) Tj ET
+BT 0.80 0.86 0.92 rg /F2 7.5 Tf 312 556.5 Td (All user tool suite API calls \(tools-suite, sub-tools, qr, pdf tools\).) Tj ET
+0.15 0.20 0.30 RG 0.5 w 48 536.5 516 16 re S
+BT 0.80 0.86 0.92 rg /F2 7.5 Tf 54 540.5 Td (src/pages/user/UserTools.jsx) Tj ET
+BT 0.80 0.86 0.92 rg /F2 7.5 Tf 312 540.5 Td (Main suite controller: renders Category Folders, Modal, and Tool pages.) Tj ET
+0.04 0.06 0.11 rg 48 520.5 516 16 re f
+0.15 0.20 0.30 RG 0.5 w 48 520.5 516 16 re S
+BT 0.80 0.86 0.92 rg /F2 7.5 Tf 54 524.5 Td (src/components/user/tools/toolsRegistry.js) Tj ET
+BT 0.80 0.86 0.92 rg /F2 7.5 Tf 312 524.5 Td (Catalog metadata: categories, sub-tool definitions, icons, endpoints.) Tj ET
+0.15 0.20 0.30 RG 0.5 w 48 504.5 516 16 re S
+BT 0.80 0.86 0.92 rg /F2 7.5 Tf 54 508.5 Td (src/components/user/tools/ToolCategoryCard.jsx) Tj ET
+BT 0.80 0.86 0.92 rg /F2 7.5 Tf 312 508.5 Td (Folder-styled card with glassmorphism and cyan glow on hover.) Tj ET
+0.04 0.06 0.11 rg 48 488.5 516 16 re f
+0.15 0.20 0.30 RG 0.5 w 48 488.5 516 16 re S
+BT 0.80 0.86 0.92 rg /F2 7.5 Tf 54 492.5 Td (src/components/user/tools/SubToolsModal.jsx) Tj ET
+BT 0.80 0.86 0.92 rg /F2 7.5 Tf 312 492.5 Td (Modal displaying sub-tools with live vs coming-soon status.) Tj ET
+0.15 0.20 0.30 RG 0.5 w 48 472.5 516 16 re S
+BT 0.80 0.86 0.92 rg /F2 7.5 Tf 54 476.5 Td (src/components/user/tools/ToolPageWrapper.jsx) Tj ET
+BT 0.80 0.86 0.92 rg /F2 7.5 Tf 312 476.5 Td (Unified workspace header with breadcrumbs and Back button.) Tj ET
+0.04 0.06 0.11 rg 48 456.5 516 16 re f
+0.15 0.20 0.30 RG 0.5 w 48 456.5 516 16 re S
+BT 0.80 0.86 0.92 rg /F2 7.5 Tf 54 460.5 Td (src/components/user/tools/fileDownloadHelper.js) Tj ET
+BT 0.80 0.86 0.92 rg /F2 7.5 Tf 312 460.5 Td (Utilities for triggering browser file downloads and formatting bytes.) Tj ET
+0.15 0.20 0.30 RG 0.5 w 48 440.5 516 16 re S
+BT 0.80 0.86 0.92 rg /F2 7.5 Tf 54 444.5 Td (src/components/user/tools/implementations/) Tj ET
+BT 0.80 0.86 0.92 rg /F2 7.5 Tf 312 444.5 Td (Houses QrCodeTool, PdfCompressorTool, ImageToPdfTool, etc.) Tj ET
+0.04 0.06 0.11 rg 48 424.5 516 16 re f
+0.15 0.20 0.30 RG 0.5 w 48 424.5 516 16 re S
+BT 0.80 0.86 0.92 rg /F2 7.5 Tf 54 428.5 Td (src/routes/DevToolBoxRoutes.jsx) Tj ET
+BT 0.80 0.86 0.92 rg /F2 7.5 Tf 312 428.5 Td (Application routing table, loaders, and protected route definitions.) Tj ET
+0.02 0.71 0.83 rg 48 402.5 4 16 re f
+BT 0.95 0.98 1 rg /F1 14 Tf 60 404.5 Td (7. Technical Interview Masterclass) Tj ET
+BT 0.75 0.82 0.9 rg /F2 9 Tf 48 382.5 Td (When interviewers ask you about DevToolBox or how you built the Tool Suite, use these structured answers to) Tj ET
+BT 0.75 0.82 0.9 rg /F2 9 Tf 48 369 Td (demonstrate senior-level engineering depth.) Tj ET
+0.08 0.07 0.16 rg 48 243.5 516 108 re f
+0.55 0.35 0.95 RG 1 w 48 243.5 516 108 re S
+BT 0.75 0.60 1 rg /F1 9 Tf 62 335.5 Td (Question 1: 'Can you walk me through the architecture of the Tool Suite?') Tj ET
+BT 0.85 0.90 0.95 rg /F2 8.5 Tf 62 321.5 Td (Answer: 'I architected a modular, registry-driven tool suite. On route mount \(/user/tools\), the client calls) Tj ET
+BT 0.85 0.90 0.95 rg /F2 8.5 Tf 62 308.5 Td (GET /api/users/tools-suite. Because backend queries often return denormalized duplicate rows, I implemented a) Tj ET
+BT 0.85 0.90 0.95 rg /F2 8.5 Tf 62 295.5 Td (client-side Map aggregation to deduplicate categories by toolId and compute real-time tool counts. Clicking a) Tj ET
+BT 0.85 0.90 0.95 rg /F2 8.5 Tf 62 282.5 Td (category folder opens a lazy-loaded modal that queries sub-tools dynamically. Clicking any tool navigates to) Tj ET
+BT 0.85 0.90 0.95 rg /F2 8.5 Tf 62 269.5 Td (/user/tools/:toolSlug, which mounts the dedicated tool controller wrapped in a unified layout shell with) Tj ET
+BT 0.85 0.90 0.95 rg /F2 8.5 Tf 62 256.5 Td (breadcrumbs. This separation ensures zero coupling between individual tool implementations.') Tj ET
+0.08 0.07 0.16 rg 48 112.5 516 121 re f
+0.55 0.35 0.95 RG 1 w 48 112.5 516 121 re S
+BT 0.75 0.60 1 rg /F1 9 Tf 62 217.5 Td (Question 2: 'How did you handle file uploads and PDF downloads with Axios?') Tj ET
+BT 0.85 0.90 0.95 rg /F2 8.5 Tf 62 203.5 Td (Answer: 'For file uploads like PDF compression and multi-image conversion, I assembled multipart/form-data) Tj ET
+BT 0.85 0.90 0.95 rg /F2 8.5 Tf 62 190.5 Td (payloads and created a request interceptor to strip default application/json headers, allowing the browser to) Tj ET
+BT 0.85 0.90 0.95 rg /F2 8.5 Tf 62 177.5 Td (set the correct boundary. For downloads, Spring Boot streams ResponseEntity<byte[]> as application/pdf.) Tj ET
+BT 0.85 0.90 0.95 rg /F2 8.5 Tf 62 164.5 Td (Standard Axios interceptors strip non-JSON bodies, so I enhanced our response interceptor to detect Blob) Tj ET
+BT 0.85 0.90 0.95 rg /F2 8.5 Tf 62 151.5 Td (instances, verify whether an error JSON was encapsulated inside the blob, and pipe the binary stream directly) Tj ET
+BT 0.85 0.90 0.95 rg /F2 8.5 Tf 62 138.5 Td (to an in-memory Object URL \(window.URL.createObjectURL\) to trigger instantaneous client-side file downloads) Tj ET
+BT 0.85 0.90 0.95 rg /F2 8.5 Tf 62 125.5 Td (with zero data loss.') Tj ET
 0.2 0.25 0.35 RG 0.5 w 48 42 m 564 42 l S
 BT 0.45 0.55 0.65 rg /F2 8 Tf 48 30 Td (DevToolBox Engineering Playbook) Tj ET
 BT 0.45 0.55 0.65 rg /F2 8 Tf 504 30 Td (Page 4 of 5) Tj ET
@@ -340,15 +357,15 @@ xref
 0000000209 00000 n 
 0000005276 00000 n 
 0000005422 00000 n 
-0000012437 00000 n 
-0000012583 00000 n 
-0000018467 00000 n 
-0000018613 00000 n 
-0000025301 00000 n 
-0000025449 00000 n 
-0000026936 00000 n 
+0000013139 00000 n 
+0000013285 00000 n 
+0000018977 00000 n 
+0000019123 00000 n 
+0000026418 00000 n 
+0000026566 00000 n 
+0000028053 00000 n 
 trailer
 << /Size 14 /Root 1 0 R >>
 startxref
-27084
+28201
 %%EOF

@@ -195,3 +195,47 @@ export const getUrlAnalyticsApi = async ({ toolId = 2, subToolId = 4 } = {}) => 
         throw error;
     }
 };
+
+/**
+ * Service to log client-side tool usage (e.g. Word Counter, UUID Generator).
+ * Backend Endpoint: POST /api/users/tools/log-usage?toolId={toolId}&subToolId={subToolId}
+ * @param {Object} payload - { toolId, subToolId }
+ */
+export const logToolUsageApi = async ({ toolId, subToolId }) => {
+    try {
+        const response = await usePrivateApi.post(
+            `/users/tools/log-usage?toolId=${Number(toolId)}&subToolId=${Number(subToolId)}`
+        );
+        return response;
+    } catch (error) {
+        console.warn("Failed to log tool usage:", error);
+        // Silent failure so tool execution in UI is never blocked by logging
+    }
+};
+
+/**
+ * Service to compress an image file.
+ * Backend Endpoint: POST /api/users/tools/image-compressor
+ * Accepts multipart/form-data: image, toolId, subToolId, level (LOW, MEDIUM, HIGH)
+ * Returns a binary JPEG Blob.
+ * @param {Object} payload - { image, toolId, subToolId, level }
+ */
+export const compressImageApi = async ({ image, toolId = 1, subToolId = 1, level = "MEDIUM" }) => {
+    try {
+        const formData = new FormData();
+        formData.append("image", image); // DTO expects parameter name 'image'
+        formData.append("toolId", Number(toolId));
+        formData.append("subToolId", Number(subToolId));
+        formData.append("level", level);
+
+        const response = await usePrivateApi.post("/users/tools/image-compressor", formData, {
+            responseType: "blob",
+            timeout: 60000,
+        });
+        return response;
+    } catch (error) {
+        console.error("Failed to compress image:", error);
+        throw error;
+    }
+};
+
