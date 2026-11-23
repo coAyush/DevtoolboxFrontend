@@ -18,8 +18,9 @@ import {
     Lock,
     ExternalLink
 } from 'lucide-react';
-import { Link } from 'react-router';
+import { Link, useLoaderData } from 'react-router';
 import { getUserProfileApi } from '../../services/user/UserProfileService';
+import { useUserDetails } from '../../context/User/UserDetailsContext';
 import { toastCustom } from '../../util/toat';
 
 /**
@@ -28,30 +29,47 @@ import { toastCustom } from '../../util/toat';
  * GET /api/users/profile-details
  */
 const UserProfile = () => {
-    const [profile, setProfile] = useState(null);
-    const [loading, setLoading] = useState(true);
+    const loaderData = useLoaderData();
+    const { user } = useUserDetails();
+
+    // Check loader data, context fallback, or null
+    const initialProfile = (() => {
+        if (loaderData?.data?.details) return loaderData.data.details;
+        if (loaderData?.data && typeof loaderData.data === 'object' && !Array.isArray(loaderData.data)) return loaderData.data;
+        if (loaderData && typeof loaderData === 'object' && loaderData.name) return loaderData;
+        if (user?.userDetails) return user.userDetails;
+        return null;
+    })();
+
+    const [profile, setProfile] = useState(initialProfile);
+    const [loading, setLoading] = useState(!initialProfile);
     const [refreshing, setRefreshing] = useState(false);
     const [error, setError] = useState(null);
 
-    // Fetch profile data on mount
+    // Fetch profile data on mount / refresh
     const fetchProfile = async (isManualRefresh = false) => {
         try {
             if (isManualRefresh) setRefreshing(true);
-            else setLoading(true);
+            else if (!profile) setLoading(true);
             setError(null);
 
             const res = await getUserProfileApi();
-            if (res && res.data) {
-                // Backend wraps in ApiResponse with data.details or data
-                const profileData = res.data.details || res.data;
-                setProfile(profileData);
+            console.log("Profile API response:", res);
+
+            const profileData = res?.data?.details ?? res?.data ?? (res?.name ? res : null);
+            if (profileData) {
+                setProfile(prev => ({ ...(prev || {}), ...profileData }));
                 if (isManualRefresh) toastCustom("Profile details refreshed!");
+            } else if (user?.userDetails) {
+                setProfile(prev => ({ ...(prev || {}), ...user.userDetails }));
             } else {
                 throw new Error("Invalid response format");
             }
         } catch (err) {
             console.error("Failed to load user profile:", err);
-            setError("Failed to fetch profile details. Please try again.");
+            if (!profile && !user?.userDetails) {
+                setError("Failed to fetch profile details. Please try again.");
+            }
         } finally {
             setLoading(false);
             setRefreshing(false);

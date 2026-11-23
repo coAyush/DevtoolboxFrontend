@@ -1,16 +1,19 @@
 import { Boxes, Loader2, Menu, X } from 'lucide-react'
 import React, { useState } from 'react'
-import { NavLink } from 'react-router'
+import { NavLink, useNavigate, useLocation } from 'react-router'
 import { useUserDetails } from '../context/User/UserDetailsContext'
 
 const UserNavbar = () => {
+    const navigate = useNavigate();
+    const location = useLocation();
     const { user, loading } = useUserDetails();
     const [isOpen, setIsOpen] = useState(false);
     console.log("in navbar");
     if (loading)
         return <Loader2 className="animate-spin text-cyan-400 m-6" />
-    
+
     const details = user?.userDetails || {};
+    const isProfileActive = location.pathname === "/user/profile";
 
 
     const Links = {
@@ -93,11 +96,20 @@ transition-all duration-300 p-2 mt-3 ml-2'>
                 </nav>
                 <div
                     aria-label="card-info"
-                    className="mb-7 flex items-center gap-3 w-[calc(100%-20px)]
-    min-h-28 rounded-2xl border border-cyan-500/30
-    shadow-[0_0_15px_rgba(6,182,212,0.15)]
-    p-3 mt-3 ml-2
-    bg-gradient-to-br from-cyan-500/20 via-indigo-500/20 to-violet-500/20"
+                    role="button"
+                    tabIndex={0}
+                    onClick={() => {
+                        setIsOpen(false);
+                        navigate("/user/profile");
+                    }}
+                    className={`mb-7 flex items-center gap-3 w-[calc(100%-20px)]
+                        min-h-28 rounded-2xl border p-3 mt-3 ml-2
+                        cursor-pointer transition-all duration-200
+                        hover:scale-[1.02] active:scale-[0.98]
+                        ${isProfileActive
+                            ? "bg-cyan-500/20 border-cyan-400/60 shadow-[0_0_20px_rgba(6,182,212,0.3)]"
+                            : "bg-gradient-to-br from-cyan-500/20 via-indigo-500/20 to-violet-500/20 border-cyan-500/30 hover:border-cyan-400/50 shadow-[0_0_15px_rgba(6,182,212,0.15)]"
+                        }`}
                 >
                     {/* Profile photo */}
                     <div

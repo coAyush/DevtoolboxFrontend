@@ -23,6 +23,7 @@ import UserProfile from "../pages/user/UserProfile";
 import { dashboardRedirect } from "../services/user/DahboardRedirect";
 import UserDashboard from "../components/user/Dashboard";
 import { getDashboardDetails } from "../services/user/UserDashboardService";
+import { getUserProfileApi } from "../services/user/UserProfileService";
 
 // eslint-disable-next-line react-refresh/only-export-components
 export const router = createBrowserRouter([
@@ -97,7 +98,8 @@ export const router = createBrowserRouter([
             },
             {
                 path: "profile",
-                element: <UserProfile />
+                element: <UserProfile />,
+                loader: getUserProfileApi
             }
         ]
     }

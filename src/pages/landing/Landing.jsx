@@ -52,12 +52,16 @@ const sections = [
         value: "Launch Web Studio",
         tools: userTools,
     },
+    /* 
+     * DEVELOPER TOOLS SECTION:
+     * Uncomment this block whenever Developer API & tools are completed!
     {
         title: "For Developers",
         theme: "purple",
         value: "Get API Keys & Documentation",
         tools: developerTools,
     },
+    */
 ];
 
 const Landing = () => {

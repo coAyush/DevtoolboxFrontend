@@ -35,7 +35,10 @@ const handleResponse = async (response) => {
     const code = response.data?.code;
     const message = response.data?.message;
     const status = response.data?.status;
-    const data = response.data?.data?.details ?? null;
+    const rawData = response.data?.data;
+    const data = (rawData && typeof rawData === 'object' && 'details' in rawData)
+        ? rawData.details
+        : (rawData ?? response.data?.details ?? response.data);
     console.log(code, message, status, data);
 
     return { code, message, status, data };

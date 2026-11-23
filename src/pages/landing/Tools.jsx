@@ -56,10 +56,9 @@ const Tools = () => {
 
 
             {/* 
-             * RESPONSIVE TOGGLE BAR TIP:
-             * Using `min-h-12 h-auto` and `text-xs sm:text-sm` prevents button label wrapping
-             * from breaking the container height on mobile.
-             */}
+             * DEVELOPER API TOOLS TOGGLE:
+             * Currently commented out until Developer API tools are implemented.
+             * Uncomment this block to restore the toggle between Normal User and Developer API tools!
             <div
                 className="
                     relative
@@ -92,8 +91,6 @@ const Tools = () => {
                         gap-1 sm:gap-2
                     "
                 >
-
-                    {/* Normal User */}
                     <button
                         type="button"
                         onClick={() => setRole("user")}
@@ -158,7 +155,6 @@ const Tools = () => {
                     >
                         Developer API tools
                     </button>
-
                 </div>
             </div>
             <p className="mt-5 text-sm text-slate-500">
@@ -174,6 +170,7 @@ const Tools = () => {
                 </span>{" "}
                 tools
             </p>
+            */}
             <div className="
     mt-8 w-full max-w-6xl
     grid grid-cols-1

@@ -1,7 +1,7 @@
 
 import React, { useEffect, useMemo, useState } from 'react'
 import { motion } from "motion/react"
-import { useLoaderData } from 'react-router'
+import { useLoaderData, useNavigate } from 'react-router'
 import {
     FileText,
     Link2,
@@ -21,6 +21,7 @@ const UserDashboard = () => {
     const [searchTerm, setSearchTerm] = useState('')
     const [startIndex, setStartIndex] = useState(0)
     const { setUser, setLoading } = useUserDetails()
+    const navigate = useNavigate();
     useEffect(() => {
         setUser(data);
         setLoading(false);
@@ -31,16 +32,20 @@ const UserDashboard = () => {
             name: 'QR Code',
             description: 'Generate QR codes quickly',
             icon: <QrCode size={32} className="text-cyan-400" />,
+            path: "/user/tools/qr-code"
         },
         {
             name: 'PDF Tools',
             description: 'Manage and process PDF files',
             icon: <FileText size={32} className="text-cyan-400" />,
+            path: "/user/tools/pdf-merge"
+
         },
         {
             name: 'Link Shortener',
             description: 'Create short, shareable links',
             icon: <Link2 size={32} className="text-cyan-400" />,
+            path: "/user/tools/url-shortener"
         },
     ]
 
@@ -107,6 +112,7 @@ const UserDashboard = () => {
 
                 <button
                     disabled={subscribe}
+                    onClick={() => navigate('/user/pricing')}
                     className={`shrink-0 rounded-xl px-4 py-2.5 text-xs sm:text-sm font-medium text-white transition-all ${subscribe
                         ? 'bg-emerald-500/80 text-emerald-100 cursor-not-allowed border border-emerald-500/40'
                         : 'bg-gradient-to-r from-rose-500 to-red-600 hover:from-rose-600 hover:to-red-700 active:scale-95 shadow-md shadow-red-950/40 cursor-pointer'
@@ -199,19 +205,20 @@ const UserDashboard = () => {
                                 {visibleTools.map(tool => (
                                     <div
                                         key={tool.name}
-                                        className="min-w-0 rounded-2xl border border-slate-700/70 bg-slate-800/50 p-4 sm:p-5 hover:border-cyan-400/60 hover:bg-slate-800 transition-all duration-200 cursor-pointer"
+                                        onClick={() => navigate(tool.path)}
+                                        className="group min-w-0 rounded-2xl border border-slate-700/70 bg-slate-800/50 p-4 sm:p-5 hover:border-cyan-400/60 hover:bg-slate-800 transition-all duration-200 cursor-pointer"
                                     >
                                         <div className="flex items-center justify-between mb-3 sm:mb-4">
-                                            <div className="rounded-xl bg-slate-700/70 p-2.5 sm:p-3">
+                                            <div className="rounded-xl bg-slate-700/70 p-2.5 sm:p-3 group-hover:scale-105 transition-transform">
                                                 {tool.icon}
                                             </div>
                                             <ChevronRight
                                                 size={18}
-                                                className="text-slate-500"
+                                                className="text-slate-500 group-hover:text-cyan-400 group-hover:translate-x-1 transition-all"
                                             />
                                         </div>
 
-                                        <h3 className="text-base sm:text-lg font-semibold text-white">
+                                        <h3 className="text-base sm:text-lg font-semibold text-white group-hover:text-cyan-300 transition-colors">
                                             {tool.name}
                                         </h3>
                                         <p className="mt-1 text-xs sm:text-sm text-slate-400 line-clamp-2">

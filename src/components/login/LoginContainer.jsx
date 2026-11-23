@@ -10,7 +10,7 @@ import { loginService } from "../../services/landing/Login";
 const LoginContainer = ({ desc, setStep, onRequireOtp, setEmail }) => {
     const navigate = useNavigate();
     const [loginForm, setLoginForm] = useState({
-        role: "",
+        role: "Normal User",
         email: "",
         password: "",
         remember: false
@@ -79,9 +79,10 @@ const LoginContainer = ({ desc, setStep, onRequireOtp, setEmail }) => {
                     {desc || "Select your workspace type to personalize your experience"}
                 </p>
                 <div className="flex flex-col sm:flex-row justify-between w-full mt-1.5 gap-3 sm:gap-4">
+                    {/* Normal User Workspace Card (Full width while Developer Card is commented out) */}
                     <div
                         onClick={() => { setLoginForm({ ...loginForm, role: "Normal User" }); setIsDeveloper(false) }}
-                        className={`rounded-2xl flex flex-col justify-between w-full sm:w-1/2 p-3.5 sm:p-5 transition-all duration-200 cursor-pointer ${loginForm.role === "Normal User"
+                        className={`rounded-2xl flex flex-col justify-between w-full p-3.5 sm:p-5 transition-all duration-200 cursor-pointer ${loginForm.role === "Normal User"
                             ? "border-2 border-cyan-400 bg-cyan-950/30 shadow-[0_0_20px_rgba(34,211,238,0.25)] ring-1 ring-cyan-400/30"
                             : "border border-slate-700/60 bg-slate-900/50 hover:border-slate-500 hover:bg-slate-800/40 hover:-translate-y-0.5"
                             }`}
@@ -98,7 +99,10 @@ const LoginContainer = ({ desc, setStep, onRequireOtp, setEmail }) => {
                         </div>
                     </div>
 
-                    {/* Developer Card */}
+                    {/* 
+                     * DEVELOPER WORKSPACE CARD:
+                     * Uncomment this block whenever Developer tools and APIs are ready!
+                     * (Remember to change the Normal User card above back to "w-full sm:w-1/2")
                     <div
                         onClick={() => { setLoginForm({ ...loginForm, role: "Developer" }); setIsDeveloper(true) }}
                         className={`rounded-2xl flex flex-col justify-between w-full sm:w-1/2 p-3.5 sm:p-5 transition-all duration-200 cursor-pointer ${isDeveloper
@@ -121,6 +125,7 @@ const LoginContainer = ({ desc, setStep, onRequireOtp, setEmail }) => {
                             </div>
                         </div>
                     </div>
+                    */}
                 </div>
 
                 {/* Social Login Buttons */}

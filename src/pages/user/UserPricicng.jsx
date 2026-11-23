@@ -1,20 +1,23 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { 
-    Check, 
-    Sparkles, 
-    ShieldCheck, 
-    Zap, 
-    Clock, 
-    HelpCircle, 
-    Loader2, 
-    AlertCircle, 
-    Layers, 
-    ArrowRight 
+import {
+    Check,
+    Sparkles,
+    ShieldCheck,
+    Zap,
+    Clock,
+    HelpCircle,
+    Loader2,
+    AlertCircle,
+    Layers,
+    ArrowRight
 } from 'lucide-react';
 import { Link } from 'react-router';
 import { getUserPlansApi, getUserProfileApi } from '../../services/user/UserProfileService';
-import { toastCustom } from '../../util/toat';
+import { toastCustom, toastError } from '../../util/toat';
+import { createPayment, veryifyPayments, failedPaymentRequest } from '../../services/user/paymentsService';
+import { loadRazorpay } from '../../util/loadRazorPay';
+import { openRazorpayCheckout } from '../../util/openRazorpayCheckout';
 
 /**
  * User Pricing & Subscription Plans Page
@@ -22,13 +25,15 @@ import { toastCustom } from '../../util/toat';
  * Highlights the user's active tier (FREE, PRO, etc.)
  */
 const UserPricicng = () => {
+    const keyId = import.meta.env.VITE_RAZORPAY_KEY_ID;
     const [plans, setPlans] = useState([]);
     const [userProfile, setUserProfile] = useState(null);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
     const [selectedPlanForModal, setSelectedPlanForModal] = useState(null);
     const [billingCycle, setBillingCycle] = useState('monthly'); // 'monthly' | 'yearly'
-
+    const [paying, setPaying] = useState(false);
+    const [verifying, setVerifying] = useState(false);
     // Fetch plans and user profile data simultaneously
     useEffect(() => {
         let isMounted = true;
@@ -119,10 +124,80 @@ const UserPricicng = () => {
         setSelectedPlanForModal(plan);
     };
 
-    const handleConfirmUpgrade = () => {
+    const handleConfirmUpgrade = async () => {
         if (!selectedPlanForModal) return;
-        toastCustom(`Subscribing to ${selectedPlanForModal.tier} plan... Redirecting to checkout.`);
+        const plan = selectedPlanForModal;
         setSelectedPlanForModal(null);
+        toastCustom(`Subscribing to ${plan.tier} plan... Opening checkout.`);
+        setPaying(true);
+
+        try {
+            const isLoaded = await loadRazorpay(keyId);
+            if (!isLoaded) {
+                toastError("Razorpay SDK could not be opened");
+                setPaying(false);
+                return;
+            }
+
+            const paymentRes = await createPayment(plan.id);
+            if (paymentRes?.code === 8) {
+                toastError(paymentRes.message || "Failed to initiate payment");
+                setPaying(false);
+                return;
+            }
+
+            const { amount, orderId, packagePurchased } = paymentRes?.data || {};
+
+            openRazorpayCheckout({
+                keyId,
+                orderId,
+                amount,
+                planName: packagePurchased || plan.tier,
+                onSuccess: async (response) => {
+                    console.log("Razorpay success response:", response);
+                    setVerifying(true);
+                    try {
+                        const res = await veryifyPayments(response);
+                        console.log("Verification response:", res);
+                        const isSuccess = res?.status?.toLowerCase() === 'success' || res?.code === 0;
+
+                        if (isSuccess) {
+                            toastCustom('Payment verified! Plan activated.');
+                            // Re-fetch profile to refresh active tier and quota
+                            try {
+                                const profRes = await getUserProfileApi();
+                                if (profRes?.data) {
+                                    setUserProfile(profRes.data.details || profRes.data);
+                                }
+                            } catch { /* ignore */ }
+                        } else {
+                            toastError(res?.message || 'Verification failed');
+                        }
+                    } catch (e) {
+                        console.error("Verification error:", e);
+                        toastError('Verification error. If money was deducted, contact support.');
+                    } finally {
+                        setVerifying(false);
+                        setPaying(false);
+                    }
+                },
+                onFailed: async (resp) => {
+                    try {
+                        await failedPaymentRequest({
+                            razorpay_order_id: resp.error?.metadata?.order_id ?? orderId,
+                            reason: resp.error?.description,
+                        });
+                    } catch { /* ignore */ }
+                    toastError(resp.error?.description || 'Payment failed, please try again');
+                    setPaying(false);
+                },
+                onDismiss: () => setPaying(false),
+            });
+        } catch (error) {
+            console.error("Payment initiation error:", error);
+            toastError("Failed to create payment");
+            setPaying(false);
+        }
     };
 
     return (
@@ -165,7 +240,7 @@ const UserPricicng = () => {
                 <div className="max-w-md mx-auto p-4 rounded-xl bg-rose-500/10 border border-rose-500/30 text-rose-300 text-center flex flex-col items-center gap-2">
                     <AlertCircle size={24} />
                     <p className="text-sm">{error}</p>
-                    <button 
+                    <button
                         onClick={() => window.location.reload()}
                         className="mt-2 px-4 py-1.5 rounded-lg bg-rose-600/30 hover:bg-rose-600/50 text-xs font-medium text-white transition-all"
                     >
@@ -189,8 +264,8 @@ const UserPricicng = () => {
                                 className={`
                                     relative flex flex-col rounded-2xl p-[1px]
                                     transition-all duration-300
-                                    ${isPro 
-                                        ? 'bg-gradient-to-b from-cyan-400 via-purple-500 to-pink-500 shadow-[0_0_35px_rgba(139,92,246,0.25)]' 
+                                    ${isPro
+                                        ? 'bg-gradient-to-b from-cyan-400 via-purple-500 to-pink-500 shadow-[0_0_35px_rgba(139,92,246,0.25)]'
                                         : 'bg-gradient-to-b from-slate-700/80 via-slate-800 to-slate-900 shadow-lg shadow-black/50'
                                     }
                                 `}
@@ -228,8 +303,8 @@ const UserPricicng = () => {
                                                 </span>
                                             </div>
                                             <p className="mt-2 text-xs text-slate-400">
-                                                {plan.amount === 0 
-                                                    ? 'Free forever for individual developers.' 
+                                                {plan.amount === 0
+                                                    ? 'Free forever for individual developers.'
                                                     : 'Billed periodically. Cancel anytime without penalty.'}
                                             </p>
                                         </div>
@@ -390,6 +465,15 @@ const UserPricicng = () => {
                     </div>
                 )}
             </AnimatePresence>
+
+            {verifying && (
+                <div className="fixed inset-0 z-[60] flex items-center justify-center bg-black/80">
+                    <div className="flex flex-col items-center gap-3 text-slate-200">
+                        <Loader2 className="animate-spin text-cyan-400" size={36} />
+                        <p className="text-sm">Verifying payment... please don't close this tab</p>
+                    </div>
+                </div>
+            )}
         </div>
     );
 };

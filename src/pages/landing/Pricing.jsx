@@ -58,11 +58,9 @@ const Pricing = () => {
 
 
             {/* 
-             * RESPONSIVE TOGGLE / TAB BAR TIP:
-             * Don't lock the tab container to a rigid height like `h-12`.
-             * Instead use `min-h-12 h-auto py-1` and responsive font sizes (`text-xs sm:text-sm`)
-             * so labels on mobile phones don't wrap awkwardly or get cut off.
-             */}
+             * DEVELOPER PLANS TOGGLE:
+             * Currently commented out until Developer API plans are introduced.
+             * Uncomment this block to restore the toggle between Normal User and Developer API plans!
             <div
                 className="
                     relative
@@ -95,8 +93,6 @@ const Pricing = () => {
                         gap-1 sm:gap-2
                     "
                 >
-
-                    {/* Normal User */}
                     <button
                         type="button"
                         onClick={() => setRole("user")}
@@ -177,17 +173,10 @@ const Pricing = () => {
                 </span>{" "}
                 plans
             </p>
-            <div className="w-full max-w-6xl mt-6 sm:mt-10">
-                {role === "user" ? (
-                    <div className="text-center text-slate-500">
-                    </div>
-                ) : (
-                    <div className="text-center text-slate-500">
-                    </div>
-                )}
-            </div>
+            */}
+
             {/* Responsive grid for pricing plans */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full max-w-6xl justify-items-center mb-12">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full max-w-4xl justify-items-center mt-6 sm:mt-8 mb-12">
                 {packageData.filter((item) => item.role.toLowerCase() === role).map((plan) => (
                     <PricingComponent key={plan.tier} data={plan} />
                 ))}

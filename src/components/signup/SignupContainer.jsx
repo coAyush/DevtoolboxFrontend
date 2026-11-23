@@ -11,13 +11,19 @@ const SignupContainer = ({ desc, setStep, setSignupStep, onSuccess, form: parent
         email: "",
         phone: "",
         password: "",
-        role: "",
+        role: "USER",
         isVerified: false,
         accountType: "LOCAL",
     });
 
     const form = parentForm || localForm;
     const setForm = setParentForm || setLocalForm;
+
+    useEffect(() => {
+        if (setParentForm && parentForm && !parentForm.role) {
+            setParentForm(prev => ({ ...prev, role: "USER" }));
+        }
+    }, [parentForm, setParentForm]);
 
     const sendSignupData = async () => {
         if (!form.email.trim()) {
@@ -82,9 +88,10 @@ const SignupContainer = ({ desc, setStep, setSignupStep, onSuccess, form: parent
                     {desc || "Select your workspace type to personalize your experience"}
                 </p>
                 <div className="flex flex-col sm:flex-row justify-between w-full mt-1.5 gap-3 sm:gap-4">
+                    {/* Normal User Workspace Card (Full width while Developer Card is commented out) */}
                     <div
                         onClick={() => { setForm({ ...form, role: "USER" }); setIsDeveloper(false) }}
-                        className={`rounded-2xl flex flex-col justify-between w-full sm:w-1/2 p-3.5 sm:p-5 transition-all duration-200 cursor-pointer ${form.role === "USER"
+                        className={`rounded-2xl flex flex-col justify-between w-full p-3.5 sm:p-5 transition-all duration-200 cursor-pointer ${form.role === "USER"
                             ? "border-2 border-cyan-400 bg-cyan-950/30 shadow-[0_0_20px_rgba(34,211,238,0.25)] ring-1 ring-cyan-400/30"
                             : "border border-slate-700/60 bg-slate-900/50 hover:border-slate-500 hover:bg-slate-800/40 hover:-translate-y-0.5"
                             }`}
@@ -101,7 +108,10 @@ const SignupContainer = ({ desc, setStep, setSignupStep, onSuccess, form: parent
                         </div>
                     </div>
 
-                    {/* Developer Card */}
+                    {/* 
+                     * DEVELOPER WORKSPACE CARD:
+                     * Uncomment this block whenever Developer tools and APIs are ready!
+                     * (Remember to change the Normal User card above back to "w-full sm:w-1/2")
                     <div
                         onClick={() => { setForm({ ...form, role: "DEVELOPER" }); setIsDeveloper(true) }}
                         className={`rounded-2xl flex flex-col justify-between w-full sm:w-1/2 p-3.5 sm:p-5 transition-all duration-200 cursor-pointer ${isDeveloper
@@ -124,6 +134,7 @@ const SignupContainer = ({ desc, setStep, setSignupStep, onSuccess, form: parent
                             </div>
                         </div>
                     </div>
+                    */}
                 </div>
 
                 {/* Form Inputs */}

@@ -58,7 +58,14 @@ export default function AboutUs() {
                         DevToolBox is an industry-grade, Dual-Track SaaS ecosystem engineered to bridge everyday web productivity tools with scalable, sub-millisecond REST microservices for modern software builders.
                     </p>
                 </section>
-                <section className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                {/* 
+                 * TRACKS SECTION:
+                 * Currently centered with `max-w-2xl mx-auto` for the Browser Utility Track.
+                 * When ready to launch Developer Infrastructure Track:
+                 * 1. Change `max-w-2xl mx-auto` back to `grid-cols-1 md:grid-cols-2 gap-8`
+                 * 2. Uncomment the Developer Infrastructure Track card below!
+                 */}
+                <section className="grid grid-cols-1 max-w-2xl mx-auto gap-8 w-full">
                     <div className="group relative rounded-2xl border border-white/10 bg-slate-900/40 backdrop-blur-xl p-8 transition-all hover:border-cyan-500/40 hover:shadow-[0_0_30px_rgba(6,182,212,0.15)]">
                         <div className="w-12 h-12 rounded-xl bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center text-cyan-400 mb-6">
                             <Sparkles className="w-6 h-6" />
@@ -73,6 +80,10 @@ export default function AboutUs() {
                             <span className="px-2.5 py-1 rounded-md bg-cyan-950/60 border border-cyan-800/40">Vanity Short Links</span>
                         </div>
                     </div>
+
+                    {/* 
+                     * DEVELOPER INFRASTRUCTURE TRACK:
+                     * Uncomment this block whenever Developer API & microservices are ready!
                     <div className="group relative rounded-2xl border border-white/10 bg-slate-900/40 backdrop-blur-xl p-8 transition-all hover:border-violet-500/40 hover:shadow-[0_0_30px_rgba(139,92,246,0.15)]">
                         <div className="w-12 h-12 rounded-xl bg-violet-500/10 border border-violet-500/20 flex items-center justify-center text-violet-400 mb-6">
                             <Terminal className="w-6 h-6" />
@@ -87,6 +98,7 @@ export default function AboutUs() {
                             <span className="px-2.5 py-1 rounded-md bg-violet-950/60 border border-violet-800/40">&lt;50ms Response Latency</span>
                         </div>
                     </div>
+                    */}
                 </section>
 
                 <section className="space-y-8">
