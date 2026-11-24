@@ -1,0 +1,342 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [5 0 R 7 0 R 9 0 R 11 0 R 13 0 R 15 0 R] /Count 6 >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Courier >>
+endobj
+4 0 obj
+<< /Length 4087 >>
+stream
+0.04 0.07 0.13 rg 48 636 516 84 re f
+0.02 0.71 0.83 RG 2 w 48 636 516 84 re S
+BT 1 1 1 rg /F1 16 Tf 64 688 Td (DevToolBox * Auth Redirection & Natural UI Guide) Tj ET
+BT 0.15 0.80 0.90 rg /F2 10 Tf 64 664 Td (How Logged-In Redirection, Route Guards & Modern SaaS Aesthetics Work) Tj ET
+BT 0.6 0.7 0.8 rg /F2 8 Tf 64 648 Td (Production Architecture Guide * Route Loaders * Axios Interceptor Protection * Natural UI) Tj ET
+0.02 0.71 0.83 rg 48 602 4 16 re f
+BT 0.95 0.98 1 rg /F1 13 Tf 60 604 Td (1. The Core Architectural Challenge) Tj ET
+BT 0.75 0.82 0.9 rg /F2 9 Tf 48 582 Td (Modern full-stack web applications require seamless, frictionless route protection. When users visit your) Tj ET
+BT 0.75 0.82 0.9 rg /F2 9 Tf 48 568.5 Td (application, two fundamental routing rules must be strictly enforced without page flickering or navigation) Tj ET
+BT 0.75 0.82 0.9 rg /F2 9 Tf 48 555 Td (delays:) Tj ET
+0.02 0.71 0.83 rg 50 539.5 3 3 re f
+BT 0.95 0.98 1 rg /F1 8.5 Tf 60 537.5 Td (Rule 1 - Guest Only Guard \(/login, /signup\): If a user already has an active session cookie, visiting /login or) Tj ET
+BT 0.75 0.82 0.9 rg /F2 8.5 Tf 60 525 Td (/signup should immediately forward them to their dashboard \(/user/dashboard\). They should never see or fill the) Tj ET
+BT 0.75 0.82 0.9 rg /F2 8.5 Tf 60 512.5 Td (login form again.) Tj ET
+0.02 0.71 0.83 rg 50 500 3 3 re f
+BT 0.95 0.98 1 rg /F1 8.5 Tf 60 498 Td (Rule 2 - Protected Workspace Guard \(/user/*\): If an unauthenticated visitor attempts to navigate directly to) Tj ET
+BT 0.75 0.82 0.9 rg /F2 8.5 Tf 60 485.5 Td (/user or /user/dashboard, they must be redirected safely to /login.) Tj ET
+0.02 0.71 0.83 rg 50 473 3 3 re f
+BT 0.95 0.98 1 rg /F1 8.5 Tf 60 471 Td (Rule 3 - Anti-AI Aesthetic Transformation: Removing clich  2023 AI template tropes \(spinning rainbow borders,) Tj ET
+BT 0.75 0.82 0.9 rg /F2 8.5 Tf 60 458.5 Td (fake macOS terminal mockups, generic AI copy\) and replacing them with a grounded, high-trust human SaaS design) Tj ET
+BT 0.75 0.82 0.9 rg /F2 8.5 Tf 60 446 Td (system.) Tj ET
+0.04 0.12 0.10 rg 48 362.5 516 69 re f
+0.10 0.75 0.50 RG 1 w 48 362.5 516 69 re S
+BT 0.20 0.90 0.60 rg /F1 9 Tf 62 415.5 Td (Why React Router 'Loader' is Superior to 'useEffect') Tj ET
+BT 0.85 0.90 0.95 rg /F2 8.5 Tf 62 401.5 Td (If you check authentication inside a component's useEffect, the login page will render for a fraction of a) Tj ET
+BT 0.85 0.90 0.95 rg /F2 8.5 Tf 62 388.5 Td (second, causing an annoying visual flash before jumping to the dashboard. React Router Route Loaders execute) Tj ET
+BT 0.85 0.90 0.95 rg /F2 8.5 Tf 62 375.5 Td (BEFORE the page component renders, guaranteeing 0ms visual flicker and instant redirection.) Tj ET
+BT 0.25 0.82 0.92 rg /F1 10.5 Tf 48 346.5 Td (The Authentication Response Contract) Tj ET
+BT 0.75 0.82 0.9 rg /F2 9 Tf 48 329.5 Td (When calling your backend endpoint POST /users/me with credentials, your Spring Boot server returns:) Tj ET
+0.03 0.05 0.09 rg 48 166 516 146 re f
+0.18 0.22 0.32 RG 0.75 w 48 166 516 146 re S
+BT 0.30 0.85 0.95 rg /F3 7.5 Tf 60 301 Td (// Response from POST /users/me \(Status: 200 OK\)) Tj ET
+BT 0.30 0.85 0.95 rg /F3 7.5 Tf 60 290 Td ({) Tj ET
+BT 0.30 0.85 0.95 rg /F3 7.5 Tf 60 279 Td (  code: 0,) Tj ET
+BT 0.30 0.85 0.95 rg /F3 7.5 Tf 60 268 Td (  message: 'User is already loggedIn',) Tj ET
+BT 0.30 0.85 0.95 rg /F3 7.5 Tf 60 257 Td (  status: 'Success',) Tj ET
+BT 0.30 0.85 0.95 rg /F3 7.5 Tf 60 246 Td (  data: {) Tj ET
+BT 0.30 0.85 0.95 rg /F3 7.5 Tf 60 235 Td (    userId: '74e75533-f1cb-4187-8116-fae3a4075973',) Tj ET
+BT 0.30 0.85 0.95 rg /F3 7.5 Tf 60 224 Td (    email: 'chowdhuryayush7@gmail.com',) Tj ET
+BT 0.30 0.85 0.95 rg /F3 7.5 Tf 60 213 Td (    role: 'USER',) Tj ET
+BT 0.30 0.85 0.95 rg /F3 7.5 Tf 60 202 Td (    authenticated: true) Tj ET
+BT 0.30 0.85 0.95 rg /F3 7.5 Tf 60 191 Td (  }) Tj ET
+BT 0.30 0.85 0.95 rg /F3 7.5 Tf 60 180 Td (}) Tj ET
+0.2 0.25 0.35 RG 0.5 w 48 42 m 564 42 l S
+BT 0.45 0.55 0.65 rg /F2 8 Tf 48 30 Td (DevToolBox Engineering Documentation) Tj ET
+BT 0.45 0.55 0.65 rg /F2 8 Tf 504 30 Td (Page 1 of 6) Tj ET
+endstream
+endobj
+5 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R >> >> /Contents 4 0 R >>
+endobj
+6 0 obj
+<< /Length 4500 >>
+stream
+BT 0.45 0.55 0.65 rg /F2 8 Tf 48 760 Td (DevToolBox * Auth Redirection & Natural SaaS UI Guide) Tj ET
+0.2 0.25 0.35 RG 0.5 w 48 754 m 564 754 l S
+0.02 0.71 0.83 rg 48 710 4 16 re f
+BT 0.95 0.98 1 rg /F1 13 Tf 60 712 Td (2. Service Layer & The Interceptor Loop Trap) Tj ET
+BT 0.75 0.82 0.9 rg /F2 9 Tf 48 690 Td (To check whether the current browser holds a valid JWT session cookie, we created a dedicated service in) Tj ET
+BT 0.75 0.82 0.9 rg /F2 9 Tf 48 676.5 Td (src/services/landing/checkLoggedinService.js:) Tj ET
+0.03 0.05 0.09 rg 48 513 516 146 re f
+0.18 0.22 0.32 RG 0.75 w 48 513 516 146 re S
+BT 0.30 0.85 0.95 rg /F3 7.5 Tf 60 648 Td (// src/services/landing/checkLoggedinService.js) Tj ET
+BT 0.30 0.85 0.95 rg /F3 7.5 Tf 60 637 Td (import { usePrivateApi } from '../../api/axiosInstance';) Tj ET
+BT 0.30 0.85 0.95 rg /F3 7.5 Tf 60 626 Td () Tj ET
+BT 0.30 0.85 0.95 rg /F3 7.5 Tf 60 615 Td (export const checkLoggedIn = async \(\) => {) Tj ET
+BT 0.30 0.85 0.95 rg /F3 7.5 Tf 60 604 Td (    try {) Tj ET
+BT 0.30 0.85 0.95 rg /F3 7.5 Tf 60 593 Td (        // Notice skipAuthRedirect flag to prevent infinite loops!) Tj ET
+BT 0.30 0.85 0.95 rg /F3 7.5 Tf 60 582 Td (        const res = await usePrivateApi.post\('/users/me', {}, { skipAuthRedirect: true }\);) Tj ET
+BT 0.30 0.85 0.95 rg /F3 7.5 Tf 60 571 Td (        return res;) Tj ET
+BT 0.30 0.85 0.95 rg /F3 7.5 Tf 60 560 Td (    } catch \(error\) {) Tj ET
+BT 0.30 0.85 0.95 rg /F3 7.5 Tf 60 549 Td (        return null;) Tj ET
+BT 0.30 0.85 0.95 rg /F3 7.5 Tf 60 538 Td (    }) Tj ET
+BT 0.30 0.85 0.95 rg /F3 7.5 Tf 60 527 Td (};) Tj ET
+0.15 0.08 0.05 rg 48 408 516 95 re f
+0.95 0.45 0.15 RG 1 w 48 408 516 95 re S
+BT 1 0.65 0.25 rg /F1 9 Tf 62 487 Td (CRITICAL: The 'skipAuthRedirect' Infinite Loop Trap) Tj ET
+BT 0.85 0.90 0.95 rg /F2 8.5 Tf 62 473 Td (Standard Axios private interceptors catch 401 errors and automatically execute: window.location.href =) Tj ET
+BT 0.85 0.90 0.95 rg /F2 8.5 Tf 62 460 Td ('/login?reason=expired'. If a guest visits the home page or /signup, checking /users/me returns 401! Without) Tj ET
+BT 0.85 0.90 0.95 rg /F2 8.5 Tf 62 447 Td (skipAuthRedirect, the guest would be aggressively booted to /login?reason=expired. By passing {) Tj ET
+BT 0.85 0.90 0.95 rg /F2 8.5 Tf 62 434 Td (skipAuthRedirect: true }, background checks silently return null for guests without hijacking the window) Tj ET
+BT 0.85 0.90 0.95 rg /F2 8.5 Tf 62 421 Td (location.) Tj ET
+BT 0.25 0.82 0.92 rg /F1 10.5 Tf 48 392 Td (Axios Interceptor Implementation) Tj ET
+BT 0.75 0.82 0.9 rg /F2 9 Tf 48 375 Td (In src/api/axiosInterceptors.js, we updated handlePrivateError to respect skipAuthRedirect:) Tj ET
+0.03 0.05 0.09 rg 48 145.5 516 212 re f
+0.18 0.22 0.32 RG 0.75 w 48 145.5 516 212 re S
+BT 0.30 0.85 0.95 rg /F3 7.5 Tf 60 346.5 Td (// src/api/axiosInterceptors.js) Tj ET
+BT 0.30 0.85 0.95 rg /F3 7.5 Tf 60 335.5 Td (const handlePrivateError = async \(error\) => {) Tj ET
+BT 0.30 0.85 0.95 rg /F3 7.5 Tf 60 324.5 Td (    const originalRequest = error.config;) Tj ET
+BT 0.30 0.85 0.95 rg /F3 7.5 Tf 60 313.5 Td (    ...) Tj ET
+BT 0.30 0.85 0.95 rg /F3 7.5 Tf 60 302.5 Td (    try {) Tj ET
+BT 0.30 0.85 0.95 rg /F3 7.5 Tf 60 291.5 Td (        await refreshAccessToken\(\);) Tj ET
+BT 0.30 0.85 0.95 rg /F3 7.5 Tf 60 280.5 Td (        return usePrivateApi\(originalRequest\);) Tj ET
+BT 0.30 0.85 0.95 rg /F3 7.5 Tf 60 269.5 Td (    } catch \(refreshError\) {) Tj ET
+BT 0.30 0.85 0.95 rg /F3 7.5 Tf 60 258.5 Td (        // Check if caller opted out of forced login redirect) Tj ET
+BT 0.30 0.85 0.95 rg /F3 7.5 Tf 60 247.5 Td (        if \(originalRequest?.skipAuthRedirect\) {) Tj ET
+BT 0.30 0.85 0.95 rg /F3 7.5 Tf 60 236.5 Td (            return Promise.reject\(refreshError\);) Tj ET
+BT 0.30 0.85 0.95 rg /F3 7.5 Tf 60 225.5 Td (        }) Tj ET
+BT 0.30 0.85 0.95 rg /F3 7.5 Tf 60 214.5 Td (        if \(!window.location.pathname.startsWith\('/login'\)\) {) Tj ET
+BT 0.30 0.85 0.95 rg /F3 7.5 Tf 60 203.5 Td (            window.location.href = '/login?reason=expired';) Tj ET
+BT 0.30 0.85 0.95 rg /F3 7.5 Tf 60 192.5 Td (        }) Tj ET
+BT 0.30 0.85 0.95 rg /F3 7.5 Tf 60 181.5 Td (        return Promise.reject\(refreshError\);) Tj ET
+BT 0.30 0.85 0.95 rg /F3 7.5 Tf 60 170.5 Td (    }) Tj ET
+BT 0.30 0.85 0.95 rg /F3 7.5 Tf 60 159.5 Td (};) Tj ET
+0.2 0.25 0.35 RG 0.5 w 48 42 m 564 42 l S
+BT 0.45 0.55 0.65 rg /F2 8 Tf 48 30 Td (DevToolBox Engineering Documentation) Tj ET
+BT 0.45 0.55 0.65 rg /F2 8 Tf 504 30 Td (Page 2 of 6) Tj ET
+endstream
+endobj
+7 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R >> >> /Contents 6 0 R >>
+endobj
+8 0 obj
+<< /Length 3492 >>
+stream
+BT 0.45 0.55 0.65 rg /F2 8 Tf 48 760 Td (DevToolBox * Auth Redirection & Natural SaaS UI Guide) Tj ET
+0.2 0.25 0.35 RG 0.5 w 48 754 m 564 754 l S
+0.02 0.71 0.83 rg 48 710 4 16 re f
+BT 0.95 0.98 1 rg /F1 13 Tf 60 712 Td (3. Route Guards & React Router Setup) Tj ET
+BT 0.75 0.82 0.9 rg /F2 9 Tf 48 690 Td (In src/services/user/DahboardRedirect.js, we defined two exportable route guards using React Router's) Tj ET
+BT 0.75 0.82 0.9 rg /F2 9 Tf 48 676.5 Td (redirect\(\) utility:) Tj ET
+0.03 0.05 0.09 rg 48 315 516 344 re f
+0.18 0.22 0.32 RG 0.75 w 48 315 516 344 re S
+BT 0.30 0.85 0.95 rg /F3 7.5 Tf 60 648 Td (// src/services/user/DahboardRedirect.js) Tj ET
+BT 0.30 0.85 0.95 rg /F3 7.5 Tf 60 637 Td (import { redirect } from 'react-router';) Tj ET
+BT 0.30 0.85 0.95 rg /F3 7.5 Tf 60 626 Td (import { checkLoggedIn } from '../landing/checkLoggedinService';) Tj ET
+BT 0.30 0.85 0.95 rg /F3 7.5 Tf 60 615 Td () Tj ET
+BT 0.30 0.85 0.95 rg /F3 7.5 Tf 60 604 Td (// 1. Guest-only guard for /login & /signup) Tj ET
+BT 0.30 0.85 0.95 rg /F3 7.5 Tf 60 593 Td (export const redirectIfLoggedIn = async \(\) => {) Tj ET
+BT 0.30 0.85 0.95 rg /F3 7.5 Tf 60 582 Td (    try {) Tj ET
+BT 0.30 0.85 0.95 rg /F3 7.5 Tf 60 571 Td (        const res = await checkLoggedIn\(\);) Tj ET
+BT 0.30 0.85 0.95 rg /F3 7.5 Tf 60 560 Td (        if \(res && res.code === 0 && res.data?.authenticated\) {) Tj ET
+BT 0.30 0.85 0.95 rg /F3 7.5 Tf 60 549 Td (            const role = res.data?.role ? res.data.role.toLowerCase\(\) : 'user';) Tj ET
+BT 0.30 0.85 0.95 rg /F3 7.5 Tf 60 538 Td (            return redirect\(`/${role}/dashboard`\);) Tj ET
+BT 0.30 0.85 0.95 rg /F3 7.5 Tf 60 527 Td (        }) Tj ET
+BT 0.30 0.85 0.95 rg /F3 7.5 Tf 60 516 Td (    } catch \(e\) {) Tj ET
+BT 0.30 0.85 0.95 rg /F3 7.5 Tf 60 505 Td (        return null;) Tj ET
+BT 0.30 0.85 0.95 rg /F3 7.5 Tf 60 494 Td (    }) Tj ET
+BT 0.30 0.85 0.95 rg /F3 7.5 Tf 60 483 Td (    return null;) Tj ET
+BT 0.30 0.85 0.95 rg /F3 7.5 Tf 60 472 Td (};) Tj ET
+BT 0.30 0.85 0.95 rg /F3 7.5 Tf 60 461 Td () Tj ET
+BT 0.30 0.85 0.95 rg /F3 7.5 Tf 60 450 Td (// 2. Protected user workspace guard for /user/*) Tj ET
+BT 0.30 0.85 0.95 rg /F3 7.5 Tf 60 439 Td (export const dashboardRedirect = async \({ request }\) => {) Tj ET
+BT 0.30 0.85 0.95 rg /F3 7.5 Tf 60 428 Td (    const url = new URL\(request.url\);) Tj ET
+BT 0.30 0.85 0.95 rg /F3 7.5 Tf 60 417 Td (    const res = await checkLoggedIn\(\);) Tj ET
+BT 0.30 0.85 0.95 rg /F3 7.5 Tf 60 406 Td (    if \(!res || res.code !== 0 || !res.data?.authenticated\) {) Tj ET
+BT 0.30 0.85 0.95 rg /F3 7.5 Tf 60 395 Td (        return redirect\('/login'\);) Tj ET
+BT 0.30 0.85 0.95 rg /F3 7.5 Tf 60 384 Td (    }) Tj ET
+BT 0.30 0.85 0.95 rg /F3 7.5 Tf 60 373 Td (    if \(url.pathname === '/user' || url.pathname === '/user/'\) {) Tj ET
+BT 0.30 0.85 0.95 rg /F3 7.5 Tf 60 362 Td (        return redirect\('/user/dashboard'\);) Tj ET
+BT 0.30 0.85 0.95 rg /F3 7.5 Tf 60 351 Td (    }) Tj ET
+BT 0.30 0.85 0.95 rg /F3 7.5 Tf 60 340 Td (    return null;) Tj ET
+BT 0.30 0.85 0.95 rg /F3 7.5 Tf 60 329 Td (};) Tj ET
+BT 0.25 0.82 0.92 rg /F1 10.5 Tf 48 299 Td (Attaching Loaders to DevToolBoxRoutes.jsx) Tj ET
+BT 0.75 0.82 0.9 rg /F2 9 Tf 48 282 Td (Attach the loader directly to the route definitions in src/routes/DevToolBoxRoutes.jsx:) Tj ET
+0.2 0.25 0.35 RG 0.5 w 48 42 m 564 42 l S
+BT 0.45 0.55 0.65 rg /F2 8 Tf 48 30 Td (DevToolBox Engineering Documentation) Tj ET
+BT 0.45 0.55 0.65 rg /F2 8 Tf 504 30 Td (Page 3 of 6) Tj ET
+endstream
+endobj
+9 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R >> >> /Contents 8 0 R >>
+endobj
+10 0 obj
+<< /Length 1665 >>
+stream
+BT 0.45 0.55 0.65 rg /F2 8 Tf 48 760 Td (DevToolBox * Auth Redirection & Natural SaaS UI Guide) Tj ET
+0.2 0.25 0.35 RG 0.5 w 48 754 m 564 754 l S
+0.03 0.05 0.09 rg 48 541 516 179 re f
+0.18 0.22 0.32 RG 0.75 w 48 541 516 179 re S
+BT 0.30 0.85 0.95 rg /F3 7.5 Tf 60 709 Td (// src/routes/DevToolBoxRoutes.jsx) Tj ET
+BT 0.30 0.85 0.95 rg /F3 7.5 Tf 60 698 Td (export const router = createBrowserRouter\([) Tj ET
+BT 0.30 0.85 0.95 rg /F3 7.5 Tf 60 687 Td (    { path: '/login', element: <Login />, loader: redirectIfLoggedIn },) Tj ET
+BT 0.30 0.85 0.95 rg /F3 7.5 Tf 60 676 Td (    { path: '/signup', element: <Signup />, loader: redirectIfLoggedIn },) Tj ET
+BT 0.30 0.85 0.95 rg /F3 7.5 Tf 60 665 Td (    {) Tj ET
+BT 0.30 0.85 0.95 rg /F3 7.5 Tf 60 654 Td (        path: '/user',) Tj ET
+BT 0.30 0.85 0.95 rg /F3 7.5 Tf 60 643 Td (        element: <UserAppLayout />,) Tj ET
+BT 0.30 0.85 0.95 rg /F3 7.5 Tf 60 632 Td (        loader: dashboardRedirect,) Tj ET
+BT 0.30 0.85 0.95 rg /F3 7.5 Tf 60 621 Td (        children: [) Tj ET
+BT 0.30 0.85 0.95 rg /F3 7.5 Tf 60 610 Td (            { path: 'dashboard', element: <UserDashboard /> },) Tj ET
+BT 0.30 0.85 0.95 rg /F3 7.5 Tf 60 599 Td (            { path: 'tools', element: <UserTools /> },) Tj ET
+BT 0.30 0.85 0.95 rg /F3 7.5 Tf 60 588 Td (            ...) Tj ET
+BT 0.30 0.85 0.95 rg /F3 7.5 Tf 60 577 Td (        ]) Tj ET
+BT 0.30 0.85 0.95 rg /F3 7.5 Tf 60 566 Td (    }) Tj ET
+BT 0.30 0.85 0.95 rg /F3 7.5 Tf 60 555 Td (]\);) Tj ET
+0.2 0.25 0.35 RG 0.5 w 48 42 m 564 42 l S
+BT 0.45 0.55 0.65 rg /F2 8 Tf 48 30 Td (DevToolBox Engineering Documentation) Tj ET
+BT 0.45 0.55 0.65 rg /F2 8 Tf 504 30 Td (Page 4 of 6) Tj ET
+endstream
+endobj
+11 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R >> >> /Contents 10 0 R >>
+endobj
+12 0 obj
+<< /Length 4934 >>
+stream
+BT 0.45 0.55 0.65 rg /F2 8 Tf 48 760 Td (DevToolBox * Auth Redirection & Natural SaaS UI Guide) Tj ET
+0.2 0.25 0.35 RG 0.5 w 48 754 m 564 754 l S
+0.02 0.71 0.83 rg 48 710 4 16 re f
+BT 0.95 0.98 1 rg /F1 13 Tf 60 712 Td (4. Dynamic Header State & Natural UI System) Tj ET
+BT 0.75 0.82 0.9 rg /F2 9 Tf 48 690 Td (When an authenticated user browses public marketing pages \(like / or /tools\), the top navigation bar should) Tj ET
+BT 0.75 0.82 0.9 rg /F2 9 Tf 48 676.5 Td (adapt and show a 'Go to Dashboard' CTA instead of 'Log In' / 'Get Started'.) Tj ET
+0.03 0.05 0.09 rg 48 403 516 256 re f
+0.18 0.22 0.32 RG 0.75 w 48 403 516 256 re S
+BT 0.30 0.85 0.95 rg /F3 7.5 Tf 60 648 Td (// src/layout/Header.jsx) Tj ET
+BT 0.30 0.85 0.95 rg /F3 7.5 Tf 60 637 Td (useEffect\(\(\) => {) Tj ET
+BT 0.30 0.85 0.95 rg /F3 7.5 Tf 60 626 Td (    checkLoggedIn\(\).then\(res => {) Tj ET
+BT 0.30 0.85 0.95 rg /F3 7.5 Tf 60 615 Td (        if \(res?.code === 0 && res.data?.authenticated\) {) Tj ET
+BT 0.30 0.85 0.95 rg /F3 7.5 Tf 60 604 Td (            setUserAuth\(res.data\);) Tj ET
+BT 0.30 0.85 0.95 rg /F3 7.5 Tf 60 593 Td (        } else {) Tj ET
+BT 0.30 0.85 0.95 rg /F3 7.5 Tf 60 582 Td (            setUserAuth\(null\);) Tj ET
+BT 0.30 0.85 0.95 rg /F3 7.5 Tf 60 571 Td (        }) Tj ET
+BT 0.30 0.85 0.95 rg /F3 7.5 Tf 60 560 Td (    }\);) Tj ET
+BT 0.30 0.85 0.95 rg /F3 7.5 Tf 60 549 Td (}, [pathname]\);) Tj ET
+BT 0.30 0.85 0.95 rg /F3 7.5 Tf 60 538 Td () Tj ET
+BT 0.30 0.85 0.95 rg /F3 7.5 Tf 60 527 Td ({userAuth ? \() Tj ET
+BT 0.30 0.85 0.95 rg /F3 7.5 Tf 60 516 Td (    <NavLink to={dashboardPath} className='... bg-cyan-400 text-slate-950 font-semibold ...'>) Tj ET
+BT 0.30 0.85 0.95 rg /F3 7.5 Tf 60 505 Td (        <LayoutDashboard className='w-4 h-4' />) Tj ET
+BT 0.30 0.85 0.95 rg /F3 7.5 Tf 60 494 Td (        <span>Go to Dashboard</span>) Tj ET
+BT 0.30 0.85 0.95 rg /F3 7.5 Tf 60 483 Td (    </NavLink>) Tj ET
+BT 0.30 0.85 0.95 rg /F3 7.5 Tf 60 472 Td (\) : \() Tj ET
+BT 0.30 0.85 0.95 rg /F3 7.5 Tf 60 461 Td (    <>) Tj ET
+BT 0.30 0.85 0.95 rg /F3 7.5 Tf 60 450 Td (        <NavLink to='/login'>Log in</NavLink>) Tj ET
+BT 0.30 0.85 0.95 rg /F3 7.5 Tf 60 439 Td (        <NavLink to='/signup'>Get Started</NavLink>) Tj ET
+BT 0.30 0.85 0.95 rg /F3 7.5 Tf 60 428 Td (    </>) Tj ET
+BT 0.30 0.85 0.95 rg /F3 7.5 Tf 60 417 Td (\)}) Tj ET
+BT 0.25 0.82 0.92 rg /F1 10.5 Tf 48 387 Td (The Anti-AI UI Transformation Matrix) Tj ET
+BT 0.75 0.82 0.9 rg /F2 9 Tf 48 370 Td (Summary of design decisions taken to transform the template into a natural, human-engineered product:) Tj ET
+0.08 0.12 0.20 rg 48 336.5 516 16 re f
+0.25 0.35 0.50 RG 0.5 w 48 336.5 516 16 re S
+BT 0.95 0.98 1 rg /F1 8 Tf 54 340.5 Td (Component) Tj ET
+BT 0.95 0.98 1 rg /F1 8 Tf 226 340.5 Td (Previous 'AI-Generated' Look) Tj ET
+BT 0.95 0.98 1 rg /F1 8 Tf 398 340.5 Td (New Natural SaaS Design) Tj ET
+0.04 0.06 0.11 rg 48 320.5 516 16 re f
+0.15 0.20 0.30 RG 0.5 w 48 320.5 516 16 re S
+BT 0.80 0.86 0.92 rg /F2 7.5 Tf 54 324.5 Td (Canvas) Tj ET
+BT 0.80 0.86 0.92 rg /F2 7.5 Tf 226 324.5 Td (Blurry cyan/purple radial blobs) Tj ET
+BT 0.80 0.86 0.92 rg /F2 7.5 Tf 398 324.5 Td (Deep slate \(#080c14\) + fine architectural grid) Tj ET
+0.15 0.20 0.30 RG 0.5 w 48 304.5 516 16 re S
+BT 0.80 0.86 0.92 rg /F2 7.5 Tf 54 308.5 Td (Borders) Tj ET
+BT 0.80 0.86 0.92 rg /F2 7.5 Tf 226 308.5 Td (Rotating rainbow animate-border-flow) Tj ET
+BT 0.80 0.86 0.92 rg /F2 7.5 Tf 398 308.5 Td (Crisp 1px slate-800 borders + subtle hover) Tj ET
+0.04 0.06 0.11 rg 48 288.5 516 16 re f
+0.15 0.20 0.30 RG 0.5 w 48 288.5 516 16 re S
+BT 0.80 0.86 0.92 rg /F2 7.5 Tf 54 292.5 Td (Auth Box) Tj ET
+BT 0.80 0.86 0.92 rg /F2 7.5 Tf 226 292.5 Td (Wrapped in fake macOS terminal mock) Tj ET
+BT 0.80 0.86 0.92 rg /F2 7.5 Tf 398 292.5 Td (Centered clean card \(Linear/Clerk style\)) Tj ET
+0.15 0.20 0.30 RG 0.5 w 48 272.5 516 16 re S
+BT 0.80 0.86 0.92 rg /F2 7.5 Tf 54 276.5 Td (OTP Verification) Tj ET
+BT 0.80 0.86 0.92 rg /F2 7.5 Tf 226 276.5 Td (Green broken back icon & rainbow btn) Tj ET
+BT 0.80 0.86 0.92 rg /F2 7.5 Tf 398 276.5 Td (Clean slate card, 6 tactile boxes, working Back) Tj ET
+0.04 0.06 0.11 rg 48 256.5 516 16 re f
+0.15 0.20 0.30 RG 0.5 w 48 256.5 516 16 re S
+BT 0.80 0.86 0.92 rg /F2 7.5 Tf 54 260.5 Td (Copywriting) Tj ET
+BT 0.80 0.86 0.92 rg /F2 7.5 Tf 226 260.5 Td ('For Normal Users', 'makking work easy') Tj ET
+BT 0.80 0.86 0.92 rg /F2 7.5 Tf 398 260.5 Td ('Web Studio Workspace', authentic human copy) Tj ET
+0.15 0.20 0.30 RG 0.5 w 48 240.5 516 16 re S
+BT 0.80 0.86 0.92 rg /F2 7.5 Tf 54 244.5 Td (Buttons) Tj ET
+BT 0.80 0.86 0.92 rg /F2 7.5 Tf 226 244.5 Td (Neon pink-to-purple-to-cyan glow) Tj ET
+BT 0.80 0.86 0.92 rg /F2 7.5 Tf 398 244.5 Td (Solid Electric Cyan with smooth tactile hover) Tj ET
+0.2 0.25 0.35 RG 0.5 w 48 42 m 564 42 l S
+BT 0.45 0.55 0.65 rg /F2 8 Tf 48 30 Td (DevToolBox Engineering Documentation) Tj ET
+BT 0.45 0.55 0.65 rg /F2 8 Tf 504 30 Td (Page 5 of 6) Tj ET
+endstream
+endobj
+13 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R >> >> /Contents 12 0 R >>
+endobj
+14 0 obj
+<< /Length 2873 >>
+stream
+BT 0.45 0.55 0.65 rg /F2 8 Tf 48 760 Td (DevToolBox * Auth Redirection & Natural SaaS UI Guide) Tj ET
+0.2 0.25 0.35 RG 0.5 w 48 754 m 564 754 l S
+0.02 0.71 0.83 rg 48 710 4 16 re f
+BT 0.95 0.98 1 rg /F1 13 Tf 60 712 Td (5. Testing & Verification Checklist) Tj ET
+BT 0.75 0.82 0.9 rg /F2 9 Tf 48 690 Td (Run these simple verification steps to confirm everything is working smoothly in production:) Tj ET
+0.02 0.71 0.83 rg 50 674.5 3 3 re f
+BT 0.95 0.98 1 rg /F1 8.5 Tf 60 672.5 Td (Test 1 - Logged-In User visits /login: Open DevToolBox while logged in. Type /login into the URL bar and press) Tj ET
+BT 0.75 0.82 0.9 rg /F2 8.5 Tf 60 660 Td (Enter. Result: The browser immediately redirects to /user/dashboard without flashing the login form.) Tj ET
+0.02 0.71 0.83 rg 50 647.5 3 3 re f
+BT 0.95 0.98 1 rg /F1 8.5 Tf 60 645.5 Td (Test 2 - Logged-In User visits /signup: Type /signup into the URL bar and press Enter. Result: The browser) Tj ET
+BT 0.75 0.82 0.9 rg /F2 8.5 Tf 60 633 Td (immediately redirects to /user/dashboard.) Tj ET
+0.02 0.71 0.83 rg 50 620.5 3 3 re f
+BT 0.95 0.98 1 rg /F1 8.5 Tf 60 618.5 Td (Test 3 - Guest visits /user/dashboard directly: Open an Incognito window \(no cookies\). Visit /user/dashboard.) Tj ET
+BT 0.75 0.82 0.9 rg /F2 8.5 Tf 60 606 Td (Result: dashboardRedirect detects no authenticated session and safely sends the user to /login.) Tj ET
+0.02 0.71 0.83 rg 50 593.5 3 3 re f
+BT 0.95 0.98 1 rg /F1 8.5 Tf 60 591.5 Td (Test 4 - Guest visits / \(Landing Page\): Visit the home page as a guest. Result: checkLoggedIn returns null) Tj ET
+BT 0.75 0.82 0.9 rg /F2 8.5 Tf 60 579 Td (without kicking the user to /login?reason=expired. The landing page renders cleanly.) Tj ET
+0.02 0.71 0.83 rg 50 566.5 3 3 re f
+BT 0.95 0.98 1 rg /F1 8.5 Tf 60 564.5 Td (Test 5 - Dynamic Header Check: When logged in, navigate to /features or /tools. Notice the top-right button says) Tj ET
+BT 0.75 0.82 0.9 rg /F2 8.5 Tf 60 552 Td ('Go to Dashboard' with a dashboard icon.) Tj ET
+0.04 0.12 0.10 rg 48 455.5 516 82 re f
+0.10 0.75 0.50 RG 1 w 48 455.5 516 82 re S
+BT 0.20 0.90 0.60 rg /F1 9 Tf 62 521.5 Td (Complete File Locations) Tj ET
+BT 0.85 0.90 0.95 rg /F2 8.5 Tf 62 507.5 Td (1. src/services/landing/checkLoggedinService.js - POST /users/me 2. src/services/user/DahboardRedirect.js -) Tj ET
+BT 0.85 0.90 0.95 rg /F2 8.5 Tf 62 494.5 Td (redirectIfLoggedIn & dashboardRedirect 3. src/routes/DevToolBoxRoutes.jsx - Route loader attachments 4.) Tj ET
+BT 0.85 0.90 0.95 rg /F2 8.5 Tf 62 481.5 Td (src/api/axiosInterceptors.js - skipAuthRedirect interceptor guard 5. src/layout/Header.jsx - Dynamic) Tj ET
+BT 0.85 0.90 0.95 rg /F2 8.5 Tf 62 468.5 Td (authenticated navbar) Tj ET
+0.2 0.25 0.35 RG 0.5 w 48 42 m 564 42 l S
+BT 0.45 0.55 0.65 rg /F2 8 Tf 48 30 Td (DevToolBox Engineering Documentation) Tj ET
+BT 0.45 0.55 0.65 rg /F2 8 Tf 504 30 Td (Page 6 of 6) Tj ET
+endstream
+endobj
+15 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R >> >> /Contents 14 0 R >>
+endobj
+xref
+0 16
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000148 00000 n 
+0000000216 00000 n 
+0000004355 00000 n 
+0000004501 00000 n 
+0000009053 00000 n 
+0000009199 00000 n 
+0000012743 00000 n 
+0000012889 00000 n 
+0000014607 00000 n 
+0000014755 00000 n 
+0000019742 00000 n 
+0000019890 00000 n 
+0000022816 00000 n 
+trailer
+<< /Size 16 /Root 1 0 R >>
+startxref
+22964
+%%EOF

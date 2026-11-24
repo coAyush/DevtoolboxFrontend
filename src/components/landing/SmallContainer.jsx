@@ -33,4 +33,5 @@ const SmallContainer = ({ name, icon }) => {
   );
 };
 
-export default SmallContainer;
+export default SmallContainer;
+

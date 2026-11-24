@@ -58,16 +58,17 @@ const handlePrivateError = async (error) => {
     const originalRequest = error.config;
     const status = error.response?.status;
     const message = error.response?.data?.message;
-    const errorStatus = error.response?.data?.status
-    // ?. so network errors don't crash
+    const errorStatus = error.response?.data?.status;
+    
     console.log(error.response);
     if (status === 403) {
         if (errorStatus == "LIMIT_EXCEEDED") {
-            toastLimit(message)
+            toastLimit(message);
             error.isLimitExceeded = true;
             return Promise.reject(error);
         }
     }
+    
     // not a 401, or we already retried once -> give up
     if (status !== 401 || !originalRequest || originalRequest._retry) {
         return Promise.reject(error);
@@ -78,6 +79,10 @@ const handlePrivateError = async (error) => {
         await refreshAccessToken();               // browser stores the new accessToken cookie
         return usePrivateApi(originalRequest);    // retry; goes through handleResponse again
     } catch (refreshError) {
+        // If request opted out of forced login redirect (e.g. background session check)
+        if (originalRequest?.skipAuthRedirect) {
+            return Promise.reject(refreshError);
+        }
         // refresh token is bad/expired -> session is over
         if (!window.location.pathname.startsWith("/login")) {
             window.location.href = "/login?reason=expired";
@@ -86,10 +91,10 @@ const handlePrivateError = async (error) => {
     }
 };
 
-
 const handlePublicError = (error) => {
     return Promise.reject(error);
 };
+
 // Automatically strip Content-Type for FormData so Axios / Browser sets multipart/form-data boundary
 usePrivateApi.interceptors.request.use((config) => {
     if (config.data instanceof FormData) {

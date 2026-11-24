@@ -14,6 +14,9 @@ import GlassContainer from "../../styles/GlassContainer";
 
 import BigContainer from "../../components/landing/BigContainer";
 import SmallContainer from "../../components/landing/SmallContainer";
+import { useEffect, useState, } from "react";
+import { data, useNavigate } from "react-router";
+import { checkLoggedIn } from "../../services/landing/checkLoggedinService";
 
 const userTools = [
     {
@@ -65,6 +68,17 @@ const sections = [
 ];
 
 const Landing = () => {
+    const [isAuhtenticated, setIsAuhtenticated] = useState(false);
+    const navigate = useNavigate();
+    useEffect(() => {
+        const checkLogIn = async () => {
+            const { code, message, status, data } = await checkLoggedIn();
+            if (code === 0) {
+                setIsAuhtenticated(data.isAuhtenticated);
+            }
+        }
+        checkLogIn();
+    }, []);
     return (
         <PageBackground>
             <GlassContainer>

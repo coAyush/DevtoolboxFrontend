@@ -49,4 +49,5 @@ const FeatureCard = ({ content }) => {
     );
 };
 
-export default FeatureCard;
+export default FeatureCard;
+

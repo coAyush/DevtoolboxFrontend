@@ -20,7 +20,7 @@ import UserAppLayout from "../layout/UserAppLayout";
 import UserTools from "../pages/user/UserTools";
 import UserPricicng from "../pages/user/UserPricicng";
 import UserProfile from "../pages/user/UserProfile";
-import { dashboardRedirect } from "../services/user/DahboardRedirect";
+import { dashboardRedirect, redirectIfLoggedIn } from "../services/user/DahboardRedirect";
 import UserDashboard from "../components/user/Dashboard";
 import { getDashboardDetails } from "../services/user/UserDashboardService";
 import { getUserProfileApi } from "../services/user/UserProfileService";
@@ -43,8 +43,7 @@ export const router = createBrowserRouter([
                 path: "pricing",
                 element: <Pricing />,
                 loader: getPackages
-            }
-            ,
+            },
             {
                 path: "tools",
                 element: <Tools />,
@@ -58,12 +57,14 @@ export const router = createBrowserRouter([
     },
     {
         path: "/signup",
-        element: <Signup />
+        element: <Signup />,
+        loader: redirectIfLoggedIn
     },
 
     {
         path: "/login",
-        element: <Login />
+        element: <Login />,
+        loader: redirectIfLoggedIn
     },
 
     {
@@ -103,8 +104,7 @@ export const router = createBrowserRouter([
             }
         ]
     }
-]
-);
+]);
 
 const DevToolBoxRoutes = () => {
     return (

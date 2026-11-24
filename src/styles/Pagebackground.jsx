@@ -14,4 +14,5 @@ const PageBackground = ({ children }) => {
   );
 };
 
-export default PageBackground;
+export default PageBackground;
+
