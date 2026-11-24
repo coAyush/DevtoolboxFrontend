@@ -58,7 +58,8 @@ const LoginContainer = ({ desc, setStep, onRequireOtp, setEmail }) => {
 
         } catch (error) {
             console.log("catch block");
-            console.log(error);
+            console.log(error.response.data);
+            toastError(error.response.data.message);
 
         }
     }
